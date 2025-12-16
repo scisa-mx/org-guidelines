@@ -18,6 +18,30 @@ indent_style = space
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
+end_of_line = lf
+indent_size = 4
+
+[*{.csproj, .sln, .Designer.cs, .resx, .svc, .sql}]
+end_of_line = crlf
+
+# Use windows style line ending for SCISA_Framework
+[Framework/**]
+end_of_line = crlf
+[Framework.Discharge/**]
+end_of_line = crlf
+[Framework.Utils.String/**]
+end_of_line = crlf
+
+# Use windows style line ending for SIGLO & PLD
+[Front/**]
+end_of_line =  = crlf
+[Scisa.Focys.Jobs/**]
+end_of_line = crlf
+[Scisa.Focys.Scheduling/**]
+end_of_line = crlf
+[Services/**]
+end_of_line = crlf
+[WS/**]
 end_of_line = crlf
 
 [*.{js,ts,json,rb}]
