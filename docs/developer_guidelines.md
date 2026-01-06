@@ -1,0 +1,180 @@
+# Lineamientos Generales del Desarrollador
+
+## **1. Introducción General**
+
+1.1 Propósito del documento  
+1.2 Alcance (qué equipos aplica: desarrollo, análisis, QA si corresponde)  
+1.3 Responsabilidades de los roles involucrados  
+1.4 Cómo mantener actualizado este documento
+
+---
+
+## **2. Estándares de Estilo y Calidad de Código**
+
+2.1 [Lineamientos generales de estilo](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md)
+2.2 Uso oficial de `.editorconfig` 
+- [Editorconfig oficial](https://github.com/scisa-mx/org-guidelines/blob/main/.editorconfig)
+- Asegurate de tener una copia en el root de tu aplicativo (“El _root_ del aplicativo es el directorio principal donde reside todo el código fuente, configuraciones y archivos esenciales del proyecto.”) para que se apliquen los cambios en automatico en visualstudio
+2.3 [[07. Naming Conventions|Convenciones de nombres]]
+2.4 Estructura de proyectos y solución
+	2.4.1 SIGLONET
+		```
+		FRONT/
+			Scisa.Focys.Presentation.WPF
+		SIGLONET/
+			Business
+				Scisa.Focys.Business.Components
+				Scisa.Focys.Business.Entities
+			Data
+				Scisa.Focys.Data
+			Jobs
+				Scisa.Focys.Jobs
+			Services
+				Scisa.Focys.Services
+				Scisa.Focys.Services.Contracts
+		Scisa.Focys.Application
+		Scisa.Focys.I18n
+		WASHost
+		```
+	2.4.2 PLDNET
+	2.4.3 Nuevos aplicativos ```
+	src/
+		Scisa.<namespace>
+		something/
+			Scisa.something.<namespace>
+	test/
+		Scisa.<namespace>.Tests.Integration
+	README.md
+	CHANGELOG.md
+	.editorconfig
+	.git/
+	.gitignore
+	```
+2.5 Comentarios, documentación y XML docs
+- Metodos publicos con `<summary>`
+- [[0.6 Codigo Autodocumentado|Tu codigo deberia hablar por si mismo.]]
+2.6 Políticas sobre _code smells_ y _refactoring_
+* TODO: Que se espera aqui
+- https://refactoring.guru/
+
+---
+
+## **3. Librerías, Dependencias y Paquetería**
+
+3.1 Uso de librerías de terceros
+* Cuando si, cuando no
+* Que revisar cuando para SI validar la libreria
+3.2 Evaluación y aprobación de nuevas dependencias
+3.3 Versionado y actualización de paquetes (nugets, npm, etc.)
+3.4 Políticas de seguridad respecto a dependencias externas
+3.5 Como eliminar una dependencia de \_Dependencies
+3.6 Como configuro mi ambiente para usar paquetes con Nuget Locales
+3.7 Como configuro mi ambiente para usar paquetes de Nuget de SCISA
+
+---
+
+## **4. Principios y Buenas Prácticas de Desarrollo**
+
+4.1 DRY
+4.2 SOLID
+4.3 KISS
+4.4 Manejo de errores y excepciones
+4.5 Logs y observabilidad
+4.6 Manejo de configuración y secretos
+4.7 Si vas a comentar código. Mejor eliminalo
+4.8 [[0.4 Removing_IFs|Evita el IF]]
+4.9 Como manejar la deuda tecnica
+4.10 Inmutabilidad de clases
+
+---
+
+## **5. Metodología de Trabajo y Flujo de Desarrollo**
+
+5.1 Flujo para trabajar _features_
+5.2 Flujo para trabajar _bugfixes_ y _hotfixes_
+5.3 Criterios de Definition of Ready / Definition of Done  
+5.4 Pair programming y revisiones colaborativas
+5.5 Prioridad y urgencia: cómo decidir 
+5.6 Proceso de documentación mínima requerida
+5.7 Revisiones Colaborativas
+	5.7.1 Que revisar al hacer un PR
+
+---
+
+## **6. Versionamiento y Control de Código**
+
+6.1 Convenciones de ramas (Gitflow)  
+6.2 Políticas oficiales de uso de Git 
+6.3 Reglas para commits, mensajes y atomicidad
+6.4 Pull Requests: formato, checklist, aprobaciones
+6.5 Merging, rebase, squash: cuándo aplicar cada uno  
+6.6 Protección y roles en repositorios
+
+---
+
+## **7. Integración Continua, Entrega y Deployments**
+
+7.1 Pipeline de CI/CD  
+7.2 Reglas para releases  
+7.3 Versionamiento semántico o propio (tu organización usa varios esquemas)  
+7.4 Pruebas automáticas mínimas requeridas  
+7.5 Validación previa y posterior al deploy  
+7.6 Gestión de _feature flags_
+
+---
+
+## **8. Gestión de Scripts, Migraciones y Base de Datos**
+
+8.1 Cómo agregar scripts al codebase  
+8.2 Estandarización del naming de scripts  
+8.3 Proceso de validación (_idempotencia_, _hashes_, migradores tipo Flyway/DbUp)  
+8.4 Lineamientos de performance y revisión de consultas  
+8.5 Políticas sobre cambios directos en BD del cliente
+
+---
+
+## **9. Seguridad y Compliance**
+
+9.1 Lineamientos de seguridad en código  
+9.2 Manejo de credenciales y secretos  
+9.3 Validaciones y sanitización de datos  
+9.4 OWASP Top 10 (aplicado a la organización)  
+9.5 Revisión de dependencias vulnerables
+
+---
+
+## **10. Comunicación, Colaboración y Expectativas Personales**
+
+10.1 Regla: _“Investiga, acierta y no asumas — pregunta mejor”_  
+10.2 Comunicación con analistas  
+10.3 Comunicación con QA  
+10.4 Códigos de conducta en pull requests  
+10.5 Tiempo de respuesta esperado
+
+---
+
+## **11. Capacitaciones, Aprendizaje y Crecimiento**
+
+11.1 Ligas de capacitación interna  
+11.2 Mentoring y acompañamiento  
+11.3 Requerimientos mínimos de actualización trimestral  
+11.4 Rutas de aprendizaje por nivel (Junior, Mid, Senior)
+
+---
+
+## **12. Herramientas y Entorno de Desarrollo Estándar**
+
+12.1 Configuración oficial del IDE (Rider, VS, VS Code…)  
+12.2 Extensiones aprobadas  
+12.3 Configuración de linters, analizadores y herramientas de calidad  
+12.4 Estándares de entornos locales (contenedores, versiones de SDK, etc.)
+
+---
+
+## **13. Anexos**
+
+13.1 Glosario  
+13.2 Plantillas de PR  
+13.3 Plantillas de commits  
+13.4 Plantillas de documentación de feature  
+13.5 Ejemplos de buenas y malas prácticas

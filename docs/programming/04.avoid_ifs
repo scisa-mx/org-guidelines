@@ -1,0 +1,209 @@
+0.4 Avoid IFs
+
+## 🧠 Course Title: **"Taming the 'if': Writing Clean and Scalable C# Code"**
+
+---
+
+### 🎯 Course Objective
+
+By the end of this course, learners will understand:
+
+- Why excessive `if` statements can harm code maintainability
+
+- How to identify code smells related to `if` statements
+
+- When using `if` statements is acceptable
+
+- Strategies and patterns to avoid overusing `if`
+
+
+---
+
+## 📚 Module 1: The Problem with Too Many `if`s
+
+### 🔍 Why `if` Can Be Dangerous
+
+- Increased complexity (cyclomatic complexity)
+
+- Difficult to test and maintain
+
+- Violation of Open/Closed Principle
+
+- Leads to long methods or large classes (God Object)
+
+
+### 🔥 Code Smells to Watch For
+
+- Long method
+
+- Deep nesting (`if` inside `if` inside `if`)
+
+- Repeated `if-else if-else` chains
+
+- Type-checking or string comparison to control logic (`if (type == "X")`)
+
+- Switches that are repeated in many places (logic scattering)
+
+
+---
+
+## 💻 Module 2: Example of Bad Use
+
+### ⚠️ "Before" Example (Too Many `if`s)
+
+```
+public class NotificationService
+{
+    public void Send(string type, string message)
+    {
+        if (type == "email")
+        {
+            Console.WriteLine("Sending email: " + message);
+        }
+        else if (type == "sms")
+        {
+            Console.WriteLine("Sending SMS: " + message);
+        }
+        else if (type == "push")
+        {
+            Console.WriteLine("Sending push notification: " + message);
+        }
+        else
+        {
+            throw new Exception("Unknown notification type");
+        }
+    }
+}
+
+```
+
+Problems:
+
+- Hard to add new types
+
+- Violates Open/Closed
+
+- Hard to test each branch independently
+
+
+---
+
+## 🧰 Module 3: Refactoring Techniques
+
+### ✅ Strategy Pattern
+
+```
+public interface INotificationSender
+{
+    void Send(string message);
+}
+
+public class EmailSender : INotificationSender
+{
+    public void Send(string message) => Console.WriteLine("Sending email: " + message);
+}
+
+public class SmsSender : INotificationSender
+{
+    public void Send(string message) => Console.WriteLine("Sending SMS: " + message);
+}
+
+public class PushSender : INotificationSender
+{
+    public void Send(string message) => Console.WriteLine("Sending push: " + message);
+}
+
+public class NotificationService
+{
+    private readonly Dictionary<string, INotificationSender> _senders;
+
+    public NotificationService()
+    {
+        _senders = new Dictionary<string, INotificationSender>
+        {
+            { "email", new EmailSender() },
+            { "sms", new SmsSender() },
+            { "push", new PushSender() }
+        };
+    }
+
+    public void Send(string type, string message)
+    {
+        if (!_senders.TryGetValue(type, out var sender))
+            throw new Exception("Unknown notification type");
+
+        sender.Send(message);
+    }
+}
+
+```
+
+Benefits:
+
+- Easy to extend
+
+- More testable and readable
+
+- Separation of concerns
+
+
+---
+
+## 🤝 Module 4: When `if` Is OK
+
+### ✅ Acceptable Use Cases
+
+- Guard clauses:
+
+```
+if (string.IsNullOrEmpty(input)) return;
+```
+
+- Simple binary decisions
+
+- Null checks and preconditions
+
+- Logging or metrics in straightforward scenarios
+
+
+---
+
+## ❌ Module 5: When `if` Is NOT OK
+
+### ⚠️ Dangerous Situations
+
+- Controlling object behavior based on type
+
+- Handling multiple types of workflows in one method
+
+- Trying to simulate polymorphism with conditionals
+
+- Business rules that change frequently
+
+
+---
+
+## 🛠️ Module 6: Alternatives to `if`
+
+|Strategy|Description|When to Use|
+|---|---|---|
+|**Strategy Pattern**|Encapsulate behaviors|For varying behavior|
+|**Polymorphism**|Let object decide behavior|OOP best practice|
+|**Dictionary Dispatch**|Replace switch-case logic|For static mappings|
+|**State Pattern**|Manage state-dependent behavior|For stateful objects|
+|**Rule Engine**|Manage dynamic business rules|When logic changes often|
+|**Specification Pattern**|Business logic encapsulation|For composable rules|
+
+---
+
+## 📘 Module 7: Summary & Best Practices
+
+- Favor composition over conditionals
+
+- Use design patterns to clarify behavior
+
+- Avoid deeply nested logic
+
+- Keep methods short and focused
+
+- Don't fear `if`, but treat it as a tool — not a crutch

@@ -1,0 +1,132 @@
+# 07. Naming Conventions
+
+- **PascalCase** para _tipos_ y _miembros públicos_.
+- **camelCase** para _variables locales_ y _parámetros_.
+- **UPPER_CASE_SNAKE_CASE** para _constantes_ (opcional, pero común).
+- **Sin abreviaciones**, excepto las universalmente conocidas (ID, URL, HTML, SQL).
+- **Evitar nombres genéricos**: Manager, Helper, Utils
+# **2. Convenciones por Tipo**
+
+## **2.1 Clases**
+
+- **PascalCase**
+- Nombre sustantivo.
+- Claridad antes que brevedad.
+
+✔️ Correcto:
+`CustomerService`, `OrderController`, `FileLogger`
+
+❌ Incorrecto:
+`customerService`, `OrderCtrl`, `Utils`
+
+---
+
+## **2.2 Interfaces**
+
+- **Prefijo “I”** + PascalCase
+- El nombre describe un _comportamiento_ o _capacidad_.
+
+✔️ `IRepository`
+✔️ `ICustomerService`
+✔️ `IValidatable`
+
+---
+
+## **2.3 Métodos**
+
+- **PascalCase**
+- Nombre con **verbo** o **acción**
+
+✔️ `GetCustomerById()`
+✔️ `Validate()`
+✔️ `SendMessageAsync()`
+
+---
+
+## **2.4 Propiedades**
+
+- **PascalCase**
+- Sustantivos o adjetivos (sin verbos)
+
+✔️ `FirstName`
+✔️ `IsActive`
+✔️ `CreatedAt`
+
+❌ `GetFirstName` (eso es un método)
+
+---
+
+## **2.5 Variables locales**
+
+- **camelCase**
+
+✔️ `var customerList = ...;`
+✔️ `int retryCount = 3;`
+
+---
+
+## **2.6 Parámetros**
+
+- **camelCase**
+
+✔️ `public void Save(string filePath)`
+
+---
+
+## **2.7 Campos**
+
+### 🔹 **Privados → _camelCase**
+
+Este es el estándar moderno más aceptado.
+
+✔️ `_repository`
+✔️ `_maxRetries`
+
+### 🔹 **Protegidos → PascalCase o _camelCase**
+
+Ambos son válidos, pero muchos prefieren PascalCase si son heredables.
+
+---
+
+## **2.8 Constantes**
+### ✔️ O Snake Case (muy común en empresas)
+
+`const int DEFAULT_TIMEOUT = 30;`
+
+---
+
+## **2.9 Enums**
+
+- **PascalCase** para el enum y sus valores.
+
+✔️
+
+```
+public enum OrderStatus
+{
+    Pending,
+    Paid,
+    Shipped,
+    Cancelled
+}
+```
+
+---
+
+## **2.10 Eventos**
+
+- Prefijo con verbo en pasado o que indica acción.
+
+- **PascalCase**
+
+
+✔️ `OrderCreated`
+✔️ `FileUploaded`
+## **2.12 Genéricos**
+
+- Usar una sola letra **T** + palabra descriptiva
+
+✔️ `class Repository<T>`
+✔️ `class PaginatedResponse<TItem>`
+
+❌ `class Repository<TAnything>`

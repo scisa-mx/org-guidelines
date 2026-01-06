@@ -1,0 +1,82 @@
+# 0.6 Codigo Autodocumentado
+
+## 🧩 ¿Qué es el código autodocumentado?
+
+El **código autodocumentado** es aquel que **se explica por sí mismo sin necesidad de comentarios adicionales**. La intención es que cualquier desarrollador pueda entender qué hace y por qué lo hace simplemente leyendo el código.
+Se logra mediante **nombres significativos**, **estructuras claras**, **funciones pequeñas**, y **expresión explícita de intenciones**.
+Un código bien escrito disminuye la necesidad de comentarios, reduce la complejidad y evita ambigüedades.
+
+---
+
+## 📝 Mejores prácticas para escribir comentarios
+
+Aunque el objetivo es que el código sea autodocumentado, los comentarios siguen siendo importantes cuando se usan correctamente. Las siguientes son buenas prácticas organizacionales:
+
+### ✔️ **1. Comenta el “por qué”, no el “qué”**
+
+- **NO** describas lo que ya es obvio por el código.
+
+- **SÍ** explica decisiones, compensaciones técnicas o razones de negocio.
+
+
+Ejemplo:
+
+`// El proveedor X falla cuando enviamos más de 500 registros en una sola llamada.`
+
+### ✔️ **2. Documenta los casos especiales o tricky**
+
+- Comportamientos no intuitivos.
+
+- Validaciones derivadas de bugs históricos.
+
+- Dependencias externas que afectan el flujo.
+
+
+### ✔️ **3. Mantén los comentarios actualizados**
+
+- Un comentario desactualizado es peor que no tener comentario.
+
+- Si modificas el código, revisa los comentarios inmediatos.
+
+
+### ✔️ **4. Evita comentarios innecesarios o ruidosos**
+
+- No expliques sintaxis.
+
+- No repitas el nombre de las variables.
+
+- No escribas comentarios obvios.
+
+
+Ejemplo a evitar:
+
+`i++; // incrementa i`
+
+### ✔️ **5. Usa comentarios para documentar las reglas de negocio**
+
+- Cuando la lógica implementa algo que viene de requisitos que no se deducen del código.
+
+
+### ✔️ **6. Usa comentarios estructurados cuando aplique**
+
+- XML documentation en .NET para métodos públicos.
+
+- Etiquetas claras como `// TODO:`, `// NOTE:`, `// HACK:` con significado acordado por el equipo.
+
+
+### ✔️ **7. Mantén el tono profesional y conciso**
+
+- Nada de chistes internos, comentarios emocionales o frustraciones.
+
+- Explica lo justo y necesario.
+
+
+---
+
+## 🚀 Resumen ejecutivo
+
+- **Código autodocumentado** = código claro sin comentarios innecesarios.
+
+- **Comentarios** = para explicar el _por qué_, contexto de negocio, decisiones técnicas, restricciones externas, o casos especiales.
+
+- Evita lo obvio, mantén todo actualizado y escribe con intención.
