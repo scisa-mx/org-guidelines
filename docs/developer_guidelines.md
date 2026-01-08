@@ -92,8 +92,138 @@ CHANGELOG.md
 - [Tu codigo deberia hablar por si mismo.](programming/06.autodocs.md)
 
 2.6 Políticas sobre _code smells_ y _refactoring_
-* TODO: Que se espera aqui
-- https://refactoring.guru/
+- Durante el desarrollo, el objetivo principal es entregar funcionalidad correcta y alineada al requerimiento. Sin embargo, antes de subir cualquier cambio, se espera que cada desarrollador haga una revisión consciente de la calidad del código producido.
+
+Esto implica:
+
+Revisar el código más allá de que “funcione”.
+
+Detectar señales de diseño que puedan indicar problemas a corto o mediano plazo.
+
+Aplicar refactoring cuando sea necesario para mejorar:
+
+- Legibilidad
+
+❌ Antes
+```
+if (u != null && u.A && u.B && u.C)
+{
+    DoStuff();
+}
+```
+
+✅ Después
+```
+if (IsValidUser(user))
+{
+    ProcessUser();
+}
+
+bool IsValidUser(User user)
+{
+    return user != null
+        && user.IsActive
+        && user.HasAcceptedTerms
+        && user.HasProfileCompleted;
+}
+```
+- Simplicidad
+
+❌ Antes
+```
+var result = false;
+
+if (order != null)
+{
+    if (order.Items != null)
+    {
+        if (order.Items.Count > 0)
+        {
+            result = true;
+        }
+    }
+}
+
+```
+
+✅ Después
+```
+var hasItems = order?.Items?.Any() == true;
+```
+
+- Mantenibilidad
+
+❌ Antes
+```
+if (type == 1)
+{
+    ApplyDiscount(0.10m);
+}
+else if (type == 2)
+{
+    ApplyDiscount(0.15m);
+}
+else if (type == 3)
+{
+    ApplyDiscount(0.20m);
+}
+
+```
+
+✅ Después
+```
+var discount = type switch
+{
+    CustomerType.Regular => 0.10m,
+    CustomerType.Premium => 0.15m,
+    CustomerType.Vip     => 0.20m,
+    _ => 0m
+};
+
+ApplyDiscount(discount);
+```
+
+- Claridad de intención
+
+❌ Antes
+```
+foreach (var u in users)
+{
+    if (u.LastLogin < DateTime.UtcNow.AddDays(-30))
+    {
+        u.IsActive = false;
+    }
+}
+```
+
+✅ Después
+```
+DeactivateInactiveUsers(users);
+
+void DeactivateInactiveUsers(IEnumerable<User> users)
+{
+    foreach (var user in users)
+    {
+        if (IsInactive(user))
+        {
+            user.IsActive = false;
+        }
+    }
+}
+
+bool IsInactive(User user)
+{
+    return user.LastLogin < DateTime.UtcNow.AddDays(-30);
+}
+```
+
+El refactoring no es una fase separada ni opcional, sino una parte natural del cierre del trabajo. No se espera perfección, pero sí criterio profesional para no introducir deuda técnica evitable.
+
+Como referencia conceptual y práctica sobre code smells y técnicas de refactoring, se recomienda consultar el siguiente recurso, el cual es amplio y completo:
+
+🔗 https://refactoring.guru/
+
+Este material sirve como guía para identificar problemas comunes y entender cuándo un refactor es apropiado, pero el criterio final siempre debe alinearse a las necesidades reales del proyecto.
 
 ---
 
