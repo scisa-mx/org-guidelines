@@ -3,8 +3,11 @@
 ## **1. Introducción General**
 
 1.1 Propósito del documento
+
 1.2 Alcance (qué equipos aplica: desarrollo, análisis, QA si corresponde)
+
 1.3 Responsabilidades de los roles involucrados
+
 1.4 Cómo mantener actualizado este documento
 
 ---
@@ -17,12 +20,13 @@
 - [Editorconfig oficial](https://github.com/scisa-mx/org-guidelines/blob/main/.editorconfig)
 - Asegurate de tener una copia en el root de tu aplicativo (“El _root_ del aplicativo es el directorio principal donde reside todo el código fuente, configuraciones y archivos esenciales del proyecto.”) para que se apliquen los cambios en automatico en visualstudio
 
-[2.3 Convenciones de nombres](programming/07.naming_conventions.md)
+[2.3 Convenciones de nombres](programming/0.2.code_standards/2.3.naming_conventions.md)
 
 2.4 Estructura de proyectos y solución
 
 2.4.1 SIGLONET
 ```
+docs/
 FRONT/
     Scisa.Focys.Presentation.WPF
 SIGLONET/
@@ -42,6 +46,7 @@ WASHost
 ```
 2.4.2 PLDNET
 ```
+docs/
 FRONT/
     Scisa.Siglo.PLDNET.MVC
 WS/
@@ -75,6 +80,7 @@ WS/
 ```
 2.4.3 Nuevos aplicativos
 ```
+docs/
 src/
     Scisa.<namespace>
     something/
@@ -89,153 +95,65 @@ CHANGELOG.md
 ```
 2.5 Comentarios, documentación y XML docs
 - Metodos publicos con `<summary>`
-- [Tu codigo deberia hablar por si mismo.](programming/06.autodocs.md)
+- [Tu codigo deberia hablar por si mismo.](programming/0.2.code_standards/2.5.autodocs.md)
 
-2.6 Políticas sobre _code smells_ y _refactoring_
-- Durante el desarrollo, el objetivo principal es entregar funcionalidad correcta y alineada al requerimiento. Sin embargo, antes de subir cualquier cambio, se espera que cada desarrollador haga una revisión consciente de la calidad del código producido.
-
-Esto implica:
-
-Revisar el código más allá de que “funcione”.
-
-Detectar señales de diseño que puedan indicar problemas a corto o mediano plazo.
-
-Aplicar refactoring cuando sea necesario para mejorar:
-
-- Legibilidad
-
-❌ Antes
-```
-if (u != null && u.A && u.B && u.C)
-{
-    DoStuff();
-}
-```
-
-✅ Después
-```
-if (IsValidUser(user))
-{
-    ProcessUser();
-}
-
-bool IsValidUser(User user)
-{
-    return user != null
-        && user.IsActive
-        && user.HasAcceptedTerms
-        && user.HasProfileCompleted;
-}
-```
-- Simplicidad
-
-❌ Antes
-```
-var result = false;
-
-if (order != null)
-{
-    if (order.Items != null)
-    {
-        if (order.Items.Count > 0)
-        {
-            result = true;
-        }
-    }
-}
-
-```
-
-✅ Después
-```
-var hasItems = order?.Items?.Any() == true;
-```
-
-- Mantenibilidad
-
-❌ Antes
-```
-if (type == 1)
-{
-    ApplyDiscount(0.10m);
-}
-else if (type == 2)
-{
-    ApplyDiscount(0.15m);
-}
-else if (type == 3)
-{
-    ApplyDiscount(0.20m);
-}
-
-```
-
-✅ Después
-```
-var discount = type switch
-{
-    CustomerType.Regular => 0.10m,
-    CustomerType.Premium => 0.15m,
-    CustomerType.Vip     => 0.20m,
-    _ => 0m
-};
-
-ApplyDiscount(discount);
-```
-
-- Claridad de intención
-
-❌ Antes
-```
-foreach (var u in users)
-{
-    if (u.LastLogin < DateTime.UtcNow.AddDays(-30))
-    {
-        u.IsActive = false;
-    }
-}
-```
-
-✅ Después
-```
-DeactivateInactiveUsers(users);
-
-void DeactivateInactiveUsers(IEnumerable<User> users)
-{
-    foreach (var user in users)
-    {
-        if (IsInactive(user))
-        {
-            user.IsActive = false;
-        }
-    }
-}
-
-bool IsInactive(User user)
-{
-    return user.LastLogin < DateTime.UtcNow.AddDays(-30);
-}
-```
-
-El refactoring no es una fase separada ni opcional, sino una parte natural del cierre del trabajo. No se espera perfección, pero sí criterio profesional para no introducir deuda técnica evitable.
-
-Como referencia conceptual y práctica sobre code smells y técnicas de refactoring, se recomienda consultar el siguiente recurso, el cual es amplio y completo:
-
-🔗 https://refactoring.guru/
-
-Este material sirve como guía para identificar problemas comunes y entender cuándo un refactor es apropiado, pero el criterio final siempre debe alinearse a las necesidades reales del proyecto.
+[2.6 Políticas sobre _code smells_ y _refactoring_](programming/0.2.code_standards/2.6.refactoring.md)
 
 ---
 
 ## **3. Librerías, Dependencias y Paquetería**
 
 3.1 Uso de librerías de terceros
-* Cuando si, cuando no
-* Que revisar cuando para SI validar la libreria
+
+>Antes de incorporar una librería de terceros se debe evaluar no solo su funcionalidad, sino también su madurez, estabilidad, seguridad, licencia, comunidad, compatibilidad técnica y el riesgo de dependencia a largo plazo, asegurando que pueda mantenerse y reemplazarse sin comprometer la arquitectura del sistema.
+
+1. **Mantenimiento activo**
+
+   * Sin mantenimiento no hay parches, ni soporte a nuevas versiones, ni corrección de vulnerabilidades.
+
+2. **Licencia compatible**
+
+   * Un problema legal puede obligarte a reescribir o retirar el producto completo.
+
+3. **Seguridad**
+
+   * Vulnerabilidades conocidas, tiempo de respuesta y dependencias transitivas.
+
+4. **Estabilidad de la API**
+
+   * Cambios frecuentes rompen tu sistema y encarecen el mantenimiento.
+
+5. **Riesgo de lock-in / acoplamiento**
+
+   * Qué tan difícil será reemplazarla en el futuro (uso de abstracciones, adapters).
+
+Estas cinco cubren los tres ejes más importantes: **legal**, **operativo** y **arquitectónico**.
 
 3.2 Evaluación y aprobación de nuevas dependencias
 
+Despues de evaluar el uso de la herramienta...
+
+> Presenta a tu lider de proyecto un documento en `docs/adr/` con la siguiente informacion *adr -> Arquitecture Design Resoluition*
+
+- Problema que se quiere resolver.
+
+- Alternativas evaluadas (incluyendo “hacerlo in-house”).
+
+- Librería seleccionada y por qué.
+
+- Riesgos y plan de salida.
+
+> OJO: El formato oficial para la documentación es Markdown
+
+> Agreguen la resolución del uso de libreria en el documento con el razonamiento detrás de la decisión
+
 3.3 Versionado y actualización de paquetes (nugets, npm, etc.)
+
+- Fijación de versiones Nunca usar versiones flotantes (*, latest, ^ sin control en producción).
+
+>Las dependencias de terceros deben versionarse explícitamente, actualizarse de forma controlada y periódica, evaluando impacto, seguridad y compatibilidad, y documentando cambios mayores mediante ADR.
+
+> Actualiza las dependencias con vulnerabilidades detectadas por Checkmarx. Esto será revisado cada PR que se revise con Checkmarx.
 
 3.4 Políticas de seguridad respecto a dependencias externas
 
@@ -249,11 +167,11 @@ Este material sirve como guía para identificar problemas comunes y entender cu�
 
 ## **4. Principios y Buenas Prácticas de Desarrollo**
 
-4.1 DRY
+[4.1 DRY](programming/04.1.dry.md)
 
-4.2 SOLID
+[4.2 SOLID](programming/04.2.SOLID.md)
 
-4.3 KISS
+[4.3 KISS](programming/04.3.KISS.md)
 
 4.4 Manejo de errores y excepciones
 
