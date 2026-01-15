@@ -98,8 +98,30 @@ CHANGELOG.md
 ## **3. Librerías, Dependencias y Paquetería**
 
 3.1 Uso de librerías de terceros
-* Cuando si, cuando no
-* Que revisar cuando para SI validar la libreria
+
+>Antes de incorporar una librería de terceros se debe evaluar no solo su funcionalidad, sino también su madurez, estabilidad, seguridad, licencia, comunidad, compatibilidad técnica y el riesgo de dependencia a largo plazo, asegurando que pueda mantenerse y reemplazarse sin comprometer la arquitectura del sistema.
+
+1. **Mantenimiento activo**
+
+   * Sin mantenimiento no hay parches, ni soporte a nuevas versiones, ni corrección de vulnerabilidades.
+
+2. **Licencia compatible**
+
+   * Un problema legal puede obligarte a reescribir o retirar el producto completo.
+
+3. **Seguridad**
+
+   * Vulnerabilidades conocidas, tiempo de respuesta y dependencias transitivas.
+
+4. **Estabilidad de la API**
+
+   * Cambios frecuentes rompen tu sistema y encarecen el mantenimiento.
+
+5. **Riesgo de lock-in / acoplamiento**
+
+   * Qué tan difícil será reemplazarla en el futuro (uso de abstracciones, adapters).
+
+Estas cinco cubren los tres ejes más importantes: **legal**, **operativo** y **arquitectónico**.
 
 3.2 Evaluación y aprobación de nuevas dependencias
 
