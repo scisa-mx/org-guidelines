@@ -3,8 +3,11 @@
 ## **1. Introducción General**
 
 1.1 Propósito del documento
+
 1.2 Alcance (qué equipos aplica: desarrollo, análisis, QA si corresponde)
+
 1.3 Responsabilidades de los roles involucrados
+
 1.4 Cómo mantener actualizado este documento
 
 ---
@@ -23,6 +26,7 @@
 
 2.4.1 SIGLONET
 ```
+docs/
 FRONT/
     Scisa.Focys.Presentation.WPF
 SIGLONET/
@@ -42,6 +46,7 @@ WASHost
 ```
 2.4.2 PLDNET
 ```
+docs/
 FRONT/
     Scisa.Siglo.PLDNET.MVC
 WS/
@@ -75,6 +80,7 @@ WS/
 ```
 2.4.3 Nuevos aplicativos
 ```
+docs/
 src/
     Scisa.<namespace>
     something/
@@ -124,6 +130,22 @@ CHANGELOG.md
 Estas cinco cubren los tres ejes más importantes: **legal**, **operativo** y **arquitectónico**.
 
 3.2 Evaluación y aprobación de nuevas dependencias
+
+Despues de evaluar el uso de la herramienta...
+
+> Presenta a tu lider de proyecto un documento en `docs/adr/` con la siguiente informacion *adr -> Arquitecture Design Resoluition*
+
+- Problema que se quiere resolver.
+
+- Alternativas evaluadas (incluyendo “hacerlo in-house”).
+
+- Librería seleccionada y por qué.
+
+- Riesgos y plan de salida.
+
+> OJO: El formato oficial para la documentación es Markdown
+
+> Agreguen la resolución del uso de libreria en el documento con el razonamiento detrás de la decisión
 
 3.3 Versionado y actualización de paquetes (nugets, npm, etc.)
 
