@@ -149,6 +149,12 @@ Despues de evaluar el uso de la herramienta...
 
 3.3 Versionado y actualización de paquetes (nugets, npm, etc.)
 
+- Fijación de versiones Nunca usar versiones flotantes (*, latest, ^ sin control en producción).
+
+>Las dependencias de terceros deben versionarse explícitamente, actualizarse de forma controlada y periódica, evaluando impacto, seguridad y compatibilidad, y documentando cambios mayores mediante ADR.
+
+> Actualiza las dependencias con vulnerabilidades detectadas por Checkmarx. Esto será revisado cada PR que se revise con Checkmarx.
+
 3.4 Políticas de seguridad respecto a dependencias externas
 
 3.5 Como eliminar una dependencia de \_Dependencies
