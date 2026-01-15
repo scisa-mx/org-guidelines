@@ -17,7 +17,7 @@
 - [Editorconfig oficial](https://github.com/scisa-mx/org-guidelines/blob/main/.editorconfig)
 - Asegurate de tener una copia en el root de tu aplicativo (“El _root_ del aplicativo es el directorio principal donde reside todo el código fuente, configuraciones y archivos esenciales del proyecto.”) para que se apliquen los cambios en automatico en visualstudio
 
-[2.3 Convenciones de nombres](programming/07.naming_conventions.md)
+[2.3 Convenciones de nombres](programming/0.2.code_standards/2.3.naming_conventions.md)
 
 2.4 Estructura de proyectos y solución
 
@@ -89,141 +89,9 @@ CHANGELOG.md
 ```
 2.5 Comentarios, documentación y XML docs
 - Metodos publicos con `<summary>`
-- [Tu codigo deberia hablar por si mismo.](programming/06.autodocs.md)
+- [Tu codigo deberia hablar por si mismo.](programming/0.2.code_standards/2.5.autodocs.md)
 
-2.6 Políticas sobre _code smells_ y _refactoring_
-- Durante el desarrollo, el objetivo principal es entregar funcionalidad correcta y alineada al requerimiento. Sin embargo, antes de subir cualquier cambio, se espera que cada desarrollador haga una revisión consciente de la calidad del código producido.
-
-Esto implica:
-
-Revisar el código más allá de que “funcione”.
-
-Detectar señales de diseño que puedan indicar problemas a corto o mediano plazo.
-
-Aplicar refactoring cuando sea necesario para mejorar:
-
-- Legibilidad
-
-❌ Antes
-```
-if (u != null && u.A && u.B && u.C)
-{
-    DoStuff();
-}
-```
-
-✅ Después
-```
-if (IsValidUser(user))
-{
-    ProcessUser();
-}
-
-bool IsValidUser(User user)
-{
-    return user != null
-        && user.IsActive
-        && user.HasAcceptedTerms
-        && user.HasProfileCompleted;
-}
-```
-- Simplicidad
-
-❌ Antes
-```
-var result = false;
-
-if (order != null)
-{
-    if (order.Items != null)
-    {
-        if (order.Items.Count > 0)
-        {
-            result = true;
-        }
-    }
-}
-
-```
-
-✅ Después
-```
-var hasItems = order?.Items?.Any() == true;
-```
-
-- Mantenibilidad
-
-❌ Antes
-```
-if (type == 1)
-{
-    ApplyDiscount(0.10m);
-}
-else if (type == 2)
-{
-    ApplyDiscount(0.15m);
-}
-else if (type == 3)
-{
-    ApplyDiscount(0.20m);
-}
-
-```
-
-✅ Después
-```
-var discount = type switch
-{
-    CustomerType.Regular => 0.10m,
-    CustomerType.Premium => 0.15m,
-    CustomerType.Vip     => 0.20m,
-    _ => 0m
-};
-
-ApplyDiscount(discount);
-```
-
-- Claridad de intención
-
-❌ Antes
-```
-foreach (var u in users)
-{
-    if (u.LastLogin < DateTime.UtcNow.AddDays(-30))
-    {
-        u.IsActive = false;
-    }
-}
-```
-
-✅ Después
-```
-DeactivateInactiveUsers(users);
-
-void DeactivateInactiveUsers(IEnumerable<User> users)
-{
-    foreach (var user in users)
-    {
-        if (IsInactive(user))
-        {
-            user.IsActive = false;
-        }
-    }
-}
-
-bool IsInactive(User user)
-{
-    return user.LastLogin < DateTime.UtcNow.AddDays(-30);
-}
-```
-
-El refactoring no es una fase separada ni opcional, sino una parte natural del cierre del trabajo. No se espera perfección, pero sí criterio profesional para no introducir deuda técnica evitable.
-
-Como referencia conceptual y práctica sobre code smells y técnicas de refactoring, se recomienda consultar el siguiente recurso, el cual es amplio y completo:
-
-🔗 https://refactoring.guru/
-
-Este material sirve como guía para identificar problemas comunes y entender cuándo un refactor es apropiado, pero el criterio final siempre debe alinearse a las necesidades reales del proyecto.
+[2.6 Políticas sobre _code smells_ y _refactoring_](programming/0.2.code_standards/2.6.refactoring.md)
 
 ---
 
@@ -249,11 +117,11 @@ Este material sirve como guía para identificar problemas comunes y entender cu�
 
 ## **4. Principios y Buenas Prácticas de Desarrollo**
 
-4.1 DRY
+[4.1 DRY](programming/04.1.dry.md)
 
-4.2 SOLID
+[4.2 SOLID](programming/04.2.SOLID.md)
 
-4.3 KISS
+[4.3 KISS](programming/04.3.KISS.md)
 
 4.4 Manejo de errores y excepciones
 
