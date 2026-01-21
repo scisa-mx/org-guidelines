@@ -105,7 +105,7 @@ CHANGELOG.md
 
 ## **3. Librerías, Dependencias y Paquetería**
 
-3.1 Uso de librerías de terceros
+### 3.1 Uso de librerías de terceros
 
 >Antes de incorporar una librería de terceros se debe evaluar no solo su funcionalidad, sino también su madurez, estabilidad, seguridad, licencia, comunidad, compatibilidad técnica y el riesgo de dependencia a largo plazo, asegurando que pueda mantenerse y reemplazarse sin comprometer la arquitectura del sistema.
 
@@ -131,7 +131,7 @@ CHANGELOG.md
 
 Estas cinco cubren los tres ejes más importantes: **legal**, **operativo** y **arquitectónico**.
 
-3.2 Evaluación y aprobación de nuevas dependencias
+### 3.2 Evaluación y aprobación de nuevas dependencias
 
 Despues de evaluar el uso de la herramienta...
 
@@ -149,7 +149,7 @@ Despues de evaluar el uso de la herramienta...
 
 > Agreguen la resolución del uso de libreria en el documento con el razonamiento detrás de la decisión
 
-3.3 Versionado y actualización de paquetes (nugets, npm, etc.)
+### 3.3 Versionado y actualización de paquetes (nugets, npm, etc.)
 
 - Fijación de versiones Nunca usar versiones flotantes (*, latest, ^ sin control en producción).
 
@@ -159,11 +159,62 @@ Despues de evaluar el uso de la herramienta...
 
 3.4 Políticas de seguridad respecto a dependencias externas
 
-3.5 Como eliminar una dependencia de \_Dependencies
+El uso de librerías de terceros introduce riesgos de seguridad, legales y operativos, incluyendo ataques de cadena de suministro, secuestro de repositorios, paquetes falsos y licencias incompatibles.
 
-3.6 Como configuro mi ambiente para usar paquetes con Nuget Locales
+Antes de aprobar una dependencia se debe:
 
-3.7 Como configuro mi ambiente para usar paquetes de Nuget de SCISA
+- Validar su licencia y compatibilidad legal.
+
+- Revisar actividad real del proyecto y reputación de los mantenedores.
+
+- Analizar vulnerabilidades conocidas y dependencias transitivas.
+
+    Usar herramientas como:
+    - Dependabot
+    - Snyk
+    - OWASP Dependency-Check
+    - GitHub Security Advisories
+    - `dotnet list package --vulnerable`
+    - Checkmarx
+
+- Verificar que no ejecute código no documentado ni exponga información sensible.
+
+- Registrar la evaluación y decisión en un ADR o catálogo de dependencias.
+
+> WARNING: Al usar librerías de terceros existen varios riesgos de seguridad que vale la pena dejar explícitos en tus guías:
+> Proyectos “secuestrados” o falsamente confiables
+>
+>  Sí, existen escenarios como:
+>
+> Repo hijacking / takeover
+> El dueño original abandona el proyecto y alguien más toma control del repositorio o del paquete (npm, NuGet, PyPI).
+> El nombre sigue siendo popular, pero ahora el código puede incluir backdoors.
+>
+> Typosquatting
+> Paquetes con nombres casi idénticos:
+>
+> newtonsoft.json vs newtonsoft-json
+>
+> express vs expres
+> Se publican con código malicioso esperando que alguien se equivoque al escribir.
+>
+> Falsos indicadores de popularidad
+>
+> Estrellas compradas
+>
+> Forks automáticos
+>
+> Commits triviales para simular actividad
+>
+> README muy bien hecho, pero código casi vacío
+>
+> Todo esto hace que un repo “se vea vivo y confiable” cuando no lo es.
+
+### 3.5 Como eliminar una dependencia de \_Dependencies
+
+### 3.6 Como configuro mi ambiente para usar paquetes con Nuget Locales
+
+### 3.7 Como configuro mi ambiente para usar paquetes de Nuget de SCISA
 
 ---
 
