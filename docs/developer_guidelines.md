@@ -210,11 +210,9 @@ Antes de aprobar una dependencia se debe:
 >
 > Todo esto hace que un repo “se vea vivo y confiable” cuando no lo es.
 
-### 3.5 Como eliminar una dependencia de \_Dependencies
+[### 3.5 Como publicar un paquete privado NUGET para uso interno de SCISA](https://stackoverflowteams.com/c/scisa/questions/633/634#634)
 
-### 3.6 Como configuro mi ambiente para usar paquetes con Nuget Locales
-
-### 3.7 Como configuro mi ambiente para usar paquetes de Nuget de SCISA
+[### 3.6 Como configuro mi ambiente para usar paquetes con Nuget Locales](https://stackoverflowteams.com/c/scisa/questions/633/634#634)
 
 ---
 
