@@ -27,6 +27,7 @@
 2.4.1 SIGLONET
 ```
 docs/
+tests/
 FRONT/
     Scisa.Focys.Presentation.WPF
 SIGLONET/
@@ -47,6 +48,7 @@ WASHost
 2.4.2 PLDNET
 ```
 docs/
+tests/
 FRONT/
     Scisa.Siglo.PLDNET.MVC
 WS/
@@ -175,9 +177,9 @@ Despues de evaluar el uso de la herramienta...
 
 4.4 Manejo de errores y excepciones
 
-4.5 Logs y observabilidad
+[4.5 Logs y observabilidad](programming/04.5.logs.md)
 
-4.6 Manejo de configuración y secretos
+[4.6 Manejo de configuración y secretos](programming/04.6.secretos-variables.md)
 
 4.7 Si vas a comentar código. Mejor eliminalo
 
