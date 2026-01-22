@@ -27,6 +27,7 @@
 2.4.1 SIGLONET
 ```
 docs/
+tests/
 FRONT/
     Scisa.Focys.Presentation.WPF
 SIGLONET/
@@ -47,6 +48,7 @@ WASHost
 2.4.2 PLDNET
 ```
 docs/
+tests/
 FRONT/
     Scisa.Siglo.PLDNET.MVC
 WS/
@@ -103,7 +105,7 @@ CHANGELOG.md
 
 ## **3. Librerías, Dependencias y Paquetería**
 
-3.1 Uso de librerías de terceros
+### 3.1 Uso de librerías de terceros
 
 >Antes de incorporar una librería de terceros se debe evaluar no solo su funcionalidad, sino también su madurez, estabilidad, seguridad, licencia, comunidad, compatibilidad técnica y el riesgo de dependencia a largo plazo, asegurando que pueda mantenerse y reemplazarse sin comprometer la arquitectura del sistema.
 
@@ -129,7 +131,7 @@ CHANGELOG.md
 
 Estas cinco cubren los tres ejes más importantes: **legal**, **operativo** y **arquitectónico**.
 
-3.2 Evaluación y aprobación de nuevas dependencias
+### 3.2 Evaluación y aprobación de nuevas dependencias
 
 Despues de evaluar el uso de la herramienta...
 
@@ -147,7 +149,7 @@ Despues de evaluar el uso de la herramienta...
 
 > Agreguen la resolución del uso de libreria en el documento con el razonamiento detrás de la decisión
 
-3.3 Versionado y actualización de paquetes (nugets, npm, etc.)
+### 3.3 Versionado y actualización de paquetes (nugets, npm, etc.)
 
 - Fijación de versiones Nunca usar versiones flotantes (*, latest, ^ sin control en producción).
 
@@ -157,31 +159,80 @@ Despues de evaluar el uso de la herramienta...
 
 3.4 Políticas de seguridad respecto a dependencias externas
 
-3.5 Como eliminar una dependencia de \_Dependencies
+El uso de librerías de terceros introduce riesgos de seguridad, legales y operativos, incluyendo ataques de cadena de suministro, secuestro de repositorios, paquetes falsos y licencias incompatibles.
 
-3.6 Como configuro mi ambiente para usar paquetes con Nuget Locales
+Antes de aprobar una dependencia se debe:
 
-3.7 Como configuro mi ambiente para usar paquetes de Nuget de SCISA
+- Validar su licencia y compatibilidad legal.
+
+- Revisar actividad real del proyecto y reputación de los mantenedores.
+
+- Analizar vulnerabilidades conocidas y dependencias transitivas.
+
+    Usar herramientas como:
+    - Dependabot
+    - Snyk
+    - OWASP Dependency-Check
+    - GitHub Security Advisories
+    - `dotnet list package --vulnerable`
+    - Checkmarx
+
+- Verificar que no ejecute código no documentado ni exponga información sensible.
+
+- Registrar la evaluación y decisión en un ADR o catálogo de dependencias.
+
+> WARNING: Al usar librerías de terceros existen varios riesgos de seguridad que vale la pena dejar explícitos en tus guías:
+> Proyectos “secuestrados” o falsamente confiables
+>
+>  Sí, existen escenarios como:
+>
+> Repo hijacking / takeover
+> El dueño original abandona el proyecto y alguien más toma control del repositorio o del paquete (npm, NuGet, PyPI).
+> El nombre sigue siendo popular, pero ahora el código puede incluir backdoors.
+>
+> Typosquatting
+> Paquetes con nombres casi idénticos:
+>
+> newtonsoft.json vs newtonsoft-json
+>
+> express vs expres
+> Se publican con código malicioso esperando que alguien se equivoque al escribir.
+>
+> Falsos indicadores de popularidad
+>
+> Estrellas compradas
+>
+> Forks automáticos
+>
+> Commits triviales para simular actividad
+>
+> README muy bien hecho, pero código casi vacío
+>
+> Todo esto hace que un repo “se vea vivo y confiable” cuando no lo es.
+
+[### 3.5 Como publicar un paquete privado NUGET para uso interno de SCISA](https://stackoverflowteams.com/c/scisa/questions/633/634#634)
+
+[### 3.6 Como configuro mi ambiente para usar paquetes con Nuget Locales](https://stackoverflowteams.com/c/scisa/questions/633/634#634)
 
 ---
 
 ## **4. Principios y Buenas Prácticas de Desarrollo**
 
-[4.1 DRY](programming/04.1.dry.md)
+[4.1 DRY](programming/0.4.good_practices/04.1.dry.md)
 
-[4.2 SOLID](programming/04.2.SOLID.md)
+[4.2 SOLID](programming/0.4.good_practices/04.2.SOLID.md)
 
-[4.3 KISS](programming/04.3.KISS.md)
+[4.3 KISS](programming/0.4.good_practices/04.3.KISS.md)
 
-4.4 Manejo de errores y excepciones
+[4.4 Manejo de errores y excepciones](programming/0.4.good_practices/04.4.exceptions.md)
 
-4.5 Logs y observabilidad
+[4.5 Logs y observabilidad](programming/0.4.good_practices/04.5.logs.md)
 
-4.6 Manejo de configuración y secretos
+[4.6 Manejo de configuración y secretos](programming/0.4.good_practices/04.6.secretos-variables.md)
 
 4.7 Si vas a comentar código. Mejor eliminalo
 
-4.8 [Evita el IF](programming/04.avoid_ifs.md)
+4.8 [Evita el IF](programming/0.4.good_practices/04.avoid_ifs.md)
 
 4.9 Como manejar la deuda tecnica
 
