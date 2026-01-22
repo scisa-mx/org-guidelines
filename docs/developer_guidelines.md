@@ -218,21 +218,21 @@ Antes de aprobar una dependencia se debe:
 
 ## **4. Principios y Buenas Prácticas de Desarrollo**
 
-[4.1 DRY](programming/04.1.dry.md)
+[4.1 DRY](programming/0.4.good_practices/04.1.dry.md)
 
-[4.2 SOLID](programming/04.2.SOLID.md)
+[4.2 SOLID](programming/0.4.good_practices/04.2.SOLID.md)
 
-[4.3 KISS](programming/04.3.KISS.md)
+[4.3 KISS](programming/0.4.good_practices/04.3.KISS.md)
 
-4.4 Manejo de errores y excepciones
+[4.4 Manejo de errores y excepciones](programming/0.4.good_practices/04.4.exceptions.md)
 
-[4.5 Logs y observabilidad](programming/04.5.logs.md)
+[4.5 Logs y observabilidad](programming/0.4.good_practices/04.5.logs.md)
 
-[4.6 Manejo de configuración y secretos](programming/04.6.secretos-variables.md)
+[4.6 Manejo de configuración y secretos](programming/0.4.good_practices/04.6.secretos-variables.md)
 
 4.7 Si vas a comentar código. Mejor eliminalo
 
-4.8 [Evita el IF](programming/04.avoid_ifs.md)
+4.8 [Evita el IF](programming/0.4.good_practices/04.avoid_ifs.md)
 
 4.9 Como manejar la deuda tecnica
 
