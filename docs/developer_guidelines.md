@@ -266,11 +266,11 @@ Antes de aprobar una dependencia se debe:
 
 6.2 Políticas oficiales de uso de Git
 
-6.3 Reglas para commits, mensajes y atomicidad
+6.3 [Reglas para commits, mensajes y atomicidad](programming/0.6.git/06.3.commits_rules.md)
 
-6.4 Pull Requests: formato, checklist, aprobaciones
+6.4 [Pull Requests: formato, checklist, aprobaciones](programming/0.6.git/06.4.pullrequest.md)
 
-6.5 Merging, rebase, squash: cuándo aplicar cada uno
+6.5 [Merging, rebase, squash: cuándo aplicar cada uno](programming/0.6.git/06.5.merge_rebase_squash.md)
 
 6.6 Protección y roles en repositorios
 
