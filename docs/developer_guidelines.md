@@ -244,7 +244,24 @@ Antes de aprobar una dependencia se debe:
 
 5.1 Flujo para trabajar _features_
 
+https://stackoverflowteams.com/c/scisa/questions/540
+https://docs.google.com/document/d/1IAbVGCFkRElbTYEHVtHr7cEV0uk7yXZJbShKS5bvPmo/edit?tab=t.0
+https://docs.google.com/document/d/1-1xcl9-mmfmeSbTMRmmJmyUuW-LRAeo_fiilwK06c4s/edit?tab=t.0
+
+> Aqui lo mas importante es identificar claramente desde donde vas a partir para realizar tu trabajo
+
+> Revisa bien antes de subir tus cambios
+
+> Envia el PR hacia donde se esta integrando (Por default es development)
+
 5.2 Flujo para trabajar _bugfixes_ y _hotfixes_
+
+https://stackoverflowteams.com/c/scisa/questions/540
+
+> Aqui lo mas importante es identificar claramente en QUE version se va aplicar el FIX. Esto
+Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
+
+> Revisa bien antes de subir tus cambios. Envia el PR hacia donde se esta integrando (Por default es el branch de donde estas trabajando)
 
 5.3 Criterios de Definition of Ready / Definition of Done
 
