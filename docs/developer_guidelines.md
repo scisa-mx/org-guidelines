@@ -278,11 +278,11 @@ Antes de aprobar una dependencia se debe:
 
 ## **7. Integración Continua, Entrega y Deployments**
 
-7.1 Pipeline de CI/CD
+7.1 [Pipeline de CI/CD](programming/0.7.repositories/07.1.pipelines_and_ci_cd.md)
 
-7.2 Reglas para releases
+7.2 [Reglas para releases](programming/0.7.repositories/07.2.releases.md)
 
-7.3 Versionamiento semántico o propio (tu organización usa varios esquemas)
+7.3 [Versionamiento semántico o propio](programming/0.7.repositories/07.3.semantic_versioning.md)
 
 7.4 Pruebas automáticas mínimas requeridas
 
