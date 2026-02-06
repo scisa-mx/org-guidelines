@@ -279,9 +279,7 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 
 ## **6. Versionamiento y Control de Código**
 
-6.1 Convenciones de ramas (Gitflow)
-
-6.2 Políticas oficiales de uso de Git
+[6.1 Convenciones de ramas (Gitflow)](https://stackoverflowteams.com/c/scisa/questions/540)
 
 6.3 [Reglas para commits, mensajes y atomicidad](programming/0.6.git/06.3.commits_rules.md)
 
