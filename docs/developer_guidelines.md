@@ -272,7 +272,7 @@ Antes de aprobar una dependencia se debe:
 
 6.5 [Merging, rebase, squash: cuándo aplicar cada uno](programming/0.6.git/06.5.merge_rebase_squash.md)
 
-6.6 Protección y roles en repositorios
+6.6 [Protección y roles en repositorios](programming/0.6.git/06.6.repository_roles.md)
 
 ---
 
@@ -284,9 +284,9 @@ Antes de aprobar una dependencia se debe:
 
 7.3 [Versionamiento semántico o propio](programming/0.7.repositories/07.3.semantic_versioning.md)
 
-7.4 Pruebas automáticas mínimas requeridas
+7.4 [Pruebas automáticas mínimas requeridas](programming/0.7.repositories/07.4.minimum_automated_tests.md)
 
-7.5 Validación previa y posterior al deploy
+7.5 [Validación previa y posterior al deploy](programming/0.7.repositories/07.5.Pre_and_postdeployment_validation.md)
 
 7.6 Gestión de _feature flags_
 
