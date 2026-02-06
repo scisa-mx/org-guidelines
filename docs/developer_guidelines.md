@@ -273,7 +273,7 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 
 5.7 Revisiones Colaborativas
 
-5.7.1 Que revisar al hacer un PR
+[5.7.1 Que revisar al hacer un PR](https://docs.google.com/document/d/1-1xcl9-mmfmeSbTMRmmJmyUuW-LRAeo_fiilwK06c4s/edit?tab=t.0)
 
 ---
 
