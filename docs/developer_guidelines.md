@@ -263,7 +263,7 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 
 > Revisa bien antes de subir tus cambios. Envia el PR hacia donde se esta integrando (Por default es el branch de donde estas trabajando)
 
-5.3 Criterios de Definition of Ready / Definition of Done
+[5.3 Criterios de Definition of Ready / Definition of Done](programming/0.5.collaborative_work/05.3.DoR.md)
 
 5.4 Pair programming y revisiones colaborativas
 
