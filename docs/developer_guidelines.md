@@ -269,7 +269,7 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 
 [5.5 Prioridad y urgencia: cómo decidir](programming/0.5.collaborative_work/05.8.priorities.md)
 
-5.6 Proceso de documentación mínima requerida
+[5.6 Proceso de documentación mínima requerida](programming/0.5.collaborative_work/05.6.min_docs.md)
 
 5.7 Revisiones Colaborativas
 
