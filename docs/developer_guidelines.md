@@ -294,13 +294,13 @@ Antes de aprobar una dependencia se debe:
 
 ## **8. Gestión de Scripts, Migraciones y Base de Datos**
 
-8.1 Cómo agregar scripts al codebase
+8.1 [Cómo agregar scripts al codebase](programming/0.8.scripts/08.1.scripts_in_codebase.md)
 
-8.2 Estandarización del naming de scripts
+8.2 [Estandarización del naming de scripts](programming/0.8.scripts/08.2.script_naming.md)
 
 8.3 Proceso de validación (_idempotencia_, _hashes_, migradores tipo Flyway/DbUp)
 
-8.4 Lineamientos de performance y revisión de consultas
+8.4 [Lineamientos de performance y revisión de consultas](programming/0.8.scripts/08.4.performance%20.md)
 
 8.5 Políticas sobre cambios directos en BD del cliente
 
