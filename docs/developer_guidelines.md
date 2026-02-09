@@ -308,11 +308,11 @@ Antes de aprobar una dependencia se debe:
 
 ## **9. Seguridad y Compliance**
 
-9.1 Lineamientos de seguridad en código
+9.1 [Lineamientos de seguridad en código](programming/0.9.security.md/09.1.security_guidelines.md)
 
-9.2 Manejo de credenciales y secretos
+9.2 [Manejo de credenciales y secretos](programming/0.9.security.md/09.2.variables_secrets.md)
 
-9.3 Validaciones y sanitización de datos
+9.3 [Validaciones y sanitización de datos](programming/0.9.security.md/09.3.validation_and_sanitization.md)
 
 9.4 OWASP Top 10 (aplicado a la organización)
 
