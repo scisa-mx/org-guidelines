@@ -309,13 +309,13 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 
 ## **8. Gestión de Scripts, Migraciones y Base de Datos**
 
-8.1 Cómo agregar scripts al codebase
+8.1 [Cómo agregar scripts al codebase](programming/0.8.scripts/08.1.scripts_in_codebase.md)
 
-8.2 Estandarización del naming de scripts
+8.2 [Estandarización del naming de scripts](programming/0.8.scripts/08.2.script_naming.md)
 
 8.3 Proceso de validación (_idempotencia_, _hashes_, migradores tipo Flyway/DbUp)
 
-8.4 Lineamientos de performance y revisión de consultas
+8.4 [Lineamientos de performance y revisión de consultas](programming/0.8.scripts/08.4.performance%20.md)
 
 8.5 Políticas sobre cambios directos en BD del cliente
 
@@ -323,11 +323,11 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 
 ## **9. Seguridad y Compliance**
 
-9.1 Lineamientos de seguridad en código
+9.1 [Lineamientos de seguridad en código](programming/0.9.security.md/09.1.security_guidelines.md)
 
-9.2 Manejo de credenciales y secretos
+9.2 [Manejo de credenciales y secretos](programming/0.9.security.md/09.2.variables_secrets.md)
 
-9.3 Validaciones y sanitización de datos
+9.3 [Validaciones y sanitización de datos](programming/0.9.security.md/09.3.validation_and_sanitization.md)
 
 9.4 OWASP Top 10 (aplicado a la organización)
 
