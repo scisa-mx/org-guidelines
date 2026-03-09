@@ -377,10 +377,10 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 
 13.1 Glosario
 
-13.2 Plantillas de PR
+13.2 P[lantillas de PR](./programming/0.13.templates/013.2.pr_templates.md)
 
-13.3 Plantillas de commits
+13.3 [Plantillas de commits](./programming/0.13.templates/013.3.commits_templates.md)
 
-13.4 Plantillas de documentación de feature
+13.4 [Plantillas de documentación de feature](./programming/0.13.templates/013.4.feature_template.md)
 
 13.5 Ejemplos de buenas y malas prácticas
