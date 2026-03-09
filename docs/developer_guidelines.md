@@ -363,7 +363,7 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 
 ## **12. Herramientas y Entorno de Desarrollo Estándar**
 
-12.1 Configuración oficial del IDE (Rider, VS, VS Code…)
+12.1 [Configuración oficial del IDE (Rider, VS, VS Code…)](./programming/0.12.ide/012.1.ide_config.md)
 
 12.2 Extensiones aprobadas
 
