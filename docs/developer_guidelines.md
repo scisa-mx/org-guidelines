@@ -101,6 +101,9 @@ CHANGELOG.md
 
 [2.6 Políticas sobre _code smells_ y _refactoring_](programming/0.2.code_standards/2.6.refactoring.md)
 
+[2.7 Documentación basada en BDD](programming/0.2.code_standards/2.7.bdd_documentation.md)
+
+
 ---
 
 ## **3. Librerías, Dependencias y Paquetería**
