@@ -2,13 +2,13 @@
 
 ## **1. Introducción General**
 
-1.1 Propósito del documento
+[1.1 Propósito del documento](programming/0.1.introduction/01.1.purpose.md)
 
-1.2 Alcance (qué equipos aplica: desarrollo, análisis, QA si corresponde)
+[1.2 Alcance (qué equipos aplica: desarrollo, análisis, QA si corresponde)](programming/0.1.introduction/01.2.scope.md)
 
-1.3 Responsabilidades de los roles involucrados
+[1.3 Responsabilidades de los roles involucrados](programming/0.1.introduction/01.3.roles.md)
 
-1.4 Cómo mantener actualizado este documento
+[1.4 Cómo mantener actualizado este documento](programming/0.1.introduction/01.4.maintaining.md)
 
 ---
 
