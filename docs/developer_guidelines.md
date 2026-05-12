@@ -2,13 +2,13 @@
 
 ## **1. Introducción General**
 
-1.1 Propósito del documento
+[1.1 Propósito del documento](programming/0.1.introduction/01.1.purpose.md)
 
-1.2 Alcance (qué equipos aplica: desarrollo, análisis, QA si corresponde)
+[1.2 Alcance (qué equipos aplica: desarrollo, análisis, QA si corresponde)](programming/0.1.introduction/01.2.scope.md)
 
-1.3 Responsabilidades de los roles involucrados
+[1.3 Responsabilidades de los roles involucrados](programming/0.1.introduction/01.3.roles.md)
 
-1.4 Cómo mantener actualizado este documento
+[1.4 Cómo mantener actualizado este documento](programming/0.1.introduction/01.4.maintaining.md)
 
 ---
 
@@ -22,79 +22,8 @@
 
 [2.3 Convenciones de nombres](programming/0.2.code_standards/2.3.naming_conventions.md)
 
-2.4 Estructura de proyectos y solución
+[2.4 Estructura de proyectos y solución](programming/0.2.code_standards/2.4.project_structure.md)
 
-2.4.1 SIGLONET
-```
-docs/
-tests/
-FRONT/
-    Scisa.Focys.Presentation.WPF
-SIGLONET/
-    Business
-        Scisa.Focys.Business.Components
-        Scisa.Focys.Business.Entities
-    Data
-        Scisa.Focys.Data
-    Jobs
-        Scisa.Focys.Jobs
-    Services
-        Scisa.Focys.Services
-        Scisa.Focys.Services.Contracts
-Scisa.Focys.Application
-Scisa.Focys.I18n
-WASHost
-```
-2.4.2 PLDNET
-```
-docs/
-tests/
-FRONT/
-    Scisa.Siglo.PLDNET.MVC
-WS/
-    PLDNET/
-        Business/
-            Scisa.Siglo.PLDNET.Business.Components
-            Scisa.Siglo.PLDNET.Business.Entities
-        Data/
-            Scisa.Siglo.PLDNET.Data
-        Jobs/
-            Scisa.Jobs.Core
-            Scisa.Siglo.PLDNET.Jobs
-            Scisa.Siglo.PLDNET.Scheduling
-        Queues/
-            Scisa.Siglo.PLDNET.AMQ
-        Services/
-            Scisa.Siglo.PLDNET.Services
-            Scisa.Siglo.PLDNET.Services.Contracts
-    SIGLONET/
-        Business
-            Scisa.Focys.Business.Components
-            Scisa.Focys.Business.Entities
-        Data
-            Scisa.Focys.Data
-        Jobs
-            Scisa.Focys.Jobs
-        Services
-            Scisa.Focys.Services
-            Scisa.Focys.Services.Contracts
-
-```
-2.4.3 Nuevos aplicativos
-```
-docs/
-src/
-    Scisa.<namespace>
-    something/
-        Scisa.something.<namespace>
-test/
-    Scisa.<namespace>.Tests.Integration
-README.md
-CHANGELOG.md
-.editorconfig
-.git/
-.gitignore
-```
 2.5 Comentarios, documentación y XML docs
 - Metodos publicos con `<summary>`
 - [Tu codigo deberia hablar por si mismo.](programming/0.2.code_standards/2.5.autodocs.md)
@@ -108,114 +37,17 @@ CHANGELOG.md
 
 ## **3. Librerías, Dependencias y Paquetería**
 
-### 3.1 Uso de librerías de terceros
+[3.1 Uso de librerías de terceros](programming/0.3.dependencies/03.1.third_party_libraries.md)
 
->Antes de incorporar una librería de terceros se debe evaluar no solo su funcionalidad, sino también su madurez, estabilidad, seguridad, licencia, comunidad, compatibilidad técnica y el riesgo de dependencia a largo plazo, asegurando que pueda mantenerse y reemplazarse sin comprometer la arquitectura del sistema.
+[3.2 Evaluación y aprobación de nuevas dependencias](programming/0.3.dependencies/03.2.dependency_approval.md)
 
-1. **Mantenimiento activo**
+[3.3 Versionado y actualización de paquetes (NuGet, npm, etc.)](programming/0.3.dependencies/03.3.package_versioning.md)
 
-   * Sin mantenimiento no hay parches, ni soporte a nuevas versiones, ni corrección de vulnerabilidades.
+[3.4 Políticas de seguridad respecto a dependencias externas](programming/0.3.dependencies/03.4.dependency_security.md)
 
-2. **Licencia compatible**
+[3.5 Cómo publicar un paquete privado NuGet para uso interno de SCISA](https://stackoverflowteams.com/c/scisa/questions/633/634#634)
 
-   * Un problema legal puede obligarte a reescribir o retirar el producto completo.
-
-3. **Seguridad**
-
-   * Vulnerabilidades conocidas, tiempo de respuesta y dependencias transitivas.
-
-4. **Estabilidad de la API**
-
-   * Cambios frecuentes rompen tu sistema y encarecen el mantenimiento.
-
-5. **Riesgo de lock-in / acoplamiento**
-
-   * Qué tan difícil será reemplazarla en el futuro (uso de abstracciones, adapters).
-
-Estas cinco cubren los tres ejes más importantes: **legal**, **operativo** y **arquitectónico**.
-
-### 3.2 Evaluación y aprobación de nuevas dependencias
-
-Despues de evaluar el uso de la herramienta...
-
-> Presenta a tu lider de proyecto un documento en `docs/adr/` con la siguiente informacion *adr -> Arquitecture Design Resoluition*
-
-- Problema que se quiere resolver.
-
-- Alternativas evaluadas (incluyendo “hacerlo in-house”).
-
-- Librería seleccionada y por qué.
-
-- Riesgos y plan de salida.
-
-> OJO: El formato oficial para la documentación es Markdown
-
-> Agreguen la resolución del uso de libreria en el documento con el razonamiento detrás de la decisión
-
-### 3.3 Versionado y actualización de paquetes (nugets, npm, etc.)
-
-- Fijación de versiones Nunca usar versiones flotantes (*, latest, ^ sin control en producción).
-
->Las dependencias de terceros deben versionarse explícitamente, actualizarse de forma controlada y periódica, evaluando impacto, seguridad y compatibilidad, y documentando cambios mayores mediante ADR.
-
-> Actualiza las dependencias con vulnerabilidades detectadas por Checkmarx. Esto será revisado cada PR que se revise con Checkmarx.
-
-3.4 Políticas de seguridad respecto a dependencias externas
-
-El uso de librerías de terceros introduce riesgos de seguridad, legales y operativos, incluyendo ataques de cadena de suministro, secuestro de repositorios, paquetes falsos y licencias incompatibles.
-
-Antes de aprobar una dependencia se debe:
-
-- Validar su licencia y compatibilidad legal.
-
-- Revisar actividad real del proyecto y reputación de los mantenedores.
-
-- Analizar vulnerabilidades conocidas y dependencias transitivas.
-
-    Usar herramientas como:
-    - Dependabot
-    - Snyk
-    - OWASP Dependency-Check
-    - GitHub Security Advisories
-    - `dotnet list package --vulnerable`
-    - Checkmarx
-
-- Verificar que no ejecute código no documentado ni exponga información sensible.
-
-- Registrar la evaluación y decisión en un ADR o catálogo de dependencias.
-
-> WARNING: Al usar librerías de terceros existen varios riesgos de seguridad que vale la pena dejar explícitos en tus guías:
-> Proyectos “secuestrados” o falsamente confiables
->
->  Sí, existen escenarios como:
->
-> Repo hijacking / takeover
-> El dueño original abandona el proyecto y alguien más toma control del repositorio o del paquete (npm, NuGet, PyPI).
-> El nombre sigue siendo popular, pero ahora el código puede incluir backdoors.
->
-> Typosquatting
-> Paquetes con nombres casi idénticos:
->
-> newtonsoft.json vs newtonsoft-json
->
-> express vs expres
-> Se publican con código malicioso esperando que alguien se equivoque al escribir.
->
-> Falsos indicadores de popularidad
->
-> Estrellas compradas
->
-> Forks automáticos
->
-> Commits triviales para simular actividad
->
-> README muy bien hecho, pero código casi vacío
->
-> Todo esto hace que un repo “se vea vivo y confiable” cuando no lo es.
-
-[### 3.5 Como publicar un paquete privado NUGET para uso interno de SCISA](https://stackoverflowteams.com/c/scisa/questions/633/634#634)
-
-[### 3.6 Como configuro mi ambiente para usar paquetes con Nuget Locales](https://stackoverflowteams.com/c/scisa/questions/633/634#634)
+[3.6 Cómo configuro mi ambiente para usar paquetes con NuGet locales](https://stackoverflowteams.com/c/scisa/questions/633/634#634)
 
 ---
 
@@ -312,15 +144,7 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 
 ## **8. Gestión de Scripts, Migraciones y Base de Datos**
 
-8.1 [Cómo agregar scripts al codebase](programming/0.8.scripts/08.1.scripts_in_codebase.md)
-
-8.2 [Estandarización del naming de scripts](programming/0.8.scripts/08.2.script_naming.md)
-
-8.3 Proceso de validación (_idempotencia_, _hashes_, migradores tipo Flyway/DbUp)
-
-8.4 [Lineamientos de performance y revisión de consultas](programming/0.8.scripts/08.4.performance%20.md)
-
-8.5 Políticas sobre cambios directos en BD del cliente
+> Sección pendiente de documentar.
 
 ---
 

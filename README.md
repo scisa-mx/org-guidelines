@@ -8,7 +8,7 @@ Actualmente contiene el archivo global `.editorconfig` de la organización.
 
 ---
 
-## 📌 Objetivo del repositorio
+## Objetivo del repositorio
 
 Centralizar y estandarizar los lineamientos que deben seguir todos los proyectos de la organización, con el fin de:
 
@@ -22,7 +22,7 @@ Este repo crecerá con el tiempo para incluir lineamientos por rol, procesos, po
 
 ---
 
-## 📁 Contenido actual
+## Contenido actual
 
 ### `.editorconfig`
 
@@ -39,7 +39,7 @@ El propósito es que cualquier IDE compatible aplique automáticamente estas reg
 
 ---
 
-## 🛠 ¿Para qué sirve `.editorconfig`?
+## ¿Para qué sirve `.editorconfig`?
 
 `.editorconfig` permite mantener un estilo de código homogéneo en todos los proyectos sin importar:
 
@@ -58,7 +58,7 @@ En otras palabras: todos escribimos con el mismo estilo, siempre.
 
 ---
 
-## 🙌 ¿Quieres proponer un cambio o agregar un lineamiento?
+## ¿Quieres proponer un cambio o agregar un lineamiento?
 
 Este repositorio es abierto para todos los desarrolladores de SCISA. Si tienes una propuesta — una nueva guía, un ajuste a una regla existente, una convención que debería estandarizarse — este es el lugar correcto para hacerlo.
 
@@ -164,7 +164,7 @@ Al menos un miembro del equipo debe aprobar el PR antes del merge. Si el cambio 
 
 ---
 
-## 📥 ¿Cómo usarlo?
+## ¿Cómo usarlo?
 
 ### Opción 1 — Como submódulo (recomendada)
 
@@ -193,7 +193,7 @@ Simplemente copia `.editorconfig` a la raíz de cada proyecto que lo necesite. T
 
 ---
 
-## 🏗 ¿Dónde debe colocarse?
+## ¿Dónde debe colocarse?
 
 - En la raíz del repositorio del proyecto (ideal).
 - También puede colocarse en carpetas específicas si deseas reglas distintas por área (por ejemplo: `src/`, `tests/`, un módulo específico, etc.).
@@ -201,7 +201,7 @@ Simplemente copia `.editorconfig` a la raíz de cada proyecto que lo necesite. T
 
 ---
 
-## 🤝 Cómo colaborar en este repositorio
+## Cómo colaborar en este repositorio
 
 1. Hacer un fork del repositorio (ver [sección de contribución](#-quieres-proponer-un-cambio-o-agregar-un-lineamiento)).
 2. Realizar los cambios deseados en `.editorconfig` u otros lineamientos futuros.
@@ -215,7 +215,7 @@ Simplemente copia `.editorconfig` a la raíz de cada proyecto que lo necesite. T
 
 ---
 
-## 🧭 Lineamientos futuros (estructura propuesta)
+## Lineamientos futuros (estructura propuesta)
 
 Este repo está pensado para crecer. Algunas carpetas sugeridas a futuro:
 
@@ -237,12 +237,12 @@ Y cada uno con documentación clara para los equipos.
 
 ---
 
-## 📄 Licencia / Uso interno
+## Licencia / Uso interno
 
 Este repositorio es de uso interno para equipos de SCISA. Su contenido no está destinado a distribución pública externa salvo autorización explícita.
 
 ---
 
-## 🚀 Contribuye al estándar de la organización
+## Contribuye al estándar de la organización
 
 Este repositorio será una pieza clave para mantener cohesión entre todos los proyectos de la empresa. Si deseas proponer mejoras, abre un [Issue](https://github.com/scisa-mx/org-guidelines/issues) o envía un Pull Request.
