@@ -171,11 +171,12 @@ Excepciones solo para hotfix crítico (seguridad o bug bloqueante) con aprobaci�
 |---|---|
 | **PR (Pull Request)** | Intención formal de integrar una rama en otra. Los commits cuentan el *cómo*; el PR explica el *por qué*. |
 | **DoR (Definition of Ready)** | Criterios que debe cumplir un ticket antes de entrar al sprint. Responsabilidad del Analista / PO. |
-| **DoD (Definition of Done)** | Criterios que debe cumplir una funcionalidad para considerarse terminada. |
+| **DoD (Definition of Done)** | Criterios que debe cumplir una funcionalidad para considerarse terminada. Dos niveles: (1) criterios de aceptación del ticket verificados con evidencia, (2) criterios técnicos universales del equipo. Ver `05.5.DoD.md`. |
 | **Deuda técnica** | Trabajo pendiente de calidad que se acumula cuando se toman atajos. Se gestiona como parte del backlog, no como ruido de fondo. |
 | **ADR (Architecture Decision Record)** | Documento que registra una decisión arquitectónica significativa: contexto, alternativas consideradas y razón de la elección. |
 | **Tronco** | Versión base de SIGLO PLD compartida por todos los clientes estándar. Término interno oficial. Se mantiene como rama LTS cuando se requiere soporte prolongado sin agregar funcionalidad nueva. Contrasta con versión **Enterprise** (fork personalizado por cliente). |
 | **Enterprise** | Versión personalizada de SIGLO PLD para un cliente específico con requerimientos que no caben en Tronco. Mismo modelo de personalización que SIGLO CD. |
 | **Commit atómico** | Commit que compila, pasa tests y no deja el sistema en estado inconsistente. No mezcla responsabilidades. |
-| **Gateway de producción** | Checklist formal de criterios Go/No-Go que debe cumplirse antes de cualquier deploy a producción. |
+| **Gateway de producción** | Checklist formal de criterios Go/No-Go que debe cumplirse antes de cualquier deploy a producción. Lo co-firman Lead Técnico y PM. |
+| **Gateway de entrega** | Checkpoint formal de validación previo al merge de un release a `master`. Lo ejecuta el TL responsable de la comunicación con el cliente —independiente del equipo que desarrolló— sobre ambiente publicado de QA, con demo en vivo. Requiere match en tres puntas: propuesta ↔ documentación ↔ entregable. Un solo punto de desalineación es No-Go. |
 | **Tenant de pruebas** | Instancia de cliente en Producción usada para validar features antes de activarlos en el tenant productivo. No es un ambiente separado. |
