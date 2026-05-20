@@ -118,6 +118,8 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 
 [5.11 Checklist de propuesta](programming/0.5.collaborative_work/05.11.proposal_checklist.md)
 
+[5.14 Estándar de pre-análisis para propuestas](programming/0.5.collaborative_work/05.14.pre_analysis_standard.md)
+
 [5.12 Gateway de entrega](programming/0.5.collaborative_work/05.12.delivery_gateway.md)
 
 [5.13 KPI de entregas — Tasa de fallos](programming/0.5.collaborative_work/05.13.delivery_kpi.md)
