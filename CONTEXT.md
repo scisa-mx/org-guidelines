@@ -172,6 +172,7 @@ Excepciones solo para hotfix crítico (seguridad o bug bloqueante) con aprobaci�
 | **PR (Pull Request)** | Intención formal de integrar una rama en otra. Los commits cuentan el *cómo*; el PR explica el *por qué*. |
 | **DoR (Definition of Ready)** | Criterios que debe cumplir un ticket antes de entrar al sprint. Responsabilidad del Analista / PO. |
 | **DoD (Definition of Done)** | Criterios que debe cumplir una funcionalidad para considerarse terminada. Dos niveles: (1) criterios de aceptación del ticket verificados con evidencia, (2) criterios técnicos universales del equipo. Ver `05.5.DoD.md`. |
+| **AC (Criterios de Aceptación)** | Lista de condiciones verificables "Check / No Check" que debe cumplir un ticket para considerarse terminado. Se definen antes de iniciar desarrollo (ver DoR `05.3.DoD.md`). Un ticket con ACs parcialmente cubiertos no está Done. |
 | **Deuda técnica** | Trabajo pendiente de calidad que se acumula cuando se toman atajos. Se gestiona como parte del backlog, no como ruido de fondo. |
 | **ADR (Architecture Decision Record)** | Documento que registra una decisión arquitectónica significativa: contexto, alternativas consideradas y razón de la elección. |
 | **Tronco** | Versión base de SIGLO PLD compartida por todos los clientes estándar. Término interno oficial. Se mantiene como rama LTS cuando se requiere soporte prolongado sin agregar funcionalidad nueva. Contrasta con versión **Enterprise** (fork personalizado por cliente). |

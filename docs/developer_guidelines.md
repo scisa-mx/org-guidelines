@@ -216,7 +216,7 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 
 ## **13. Anexos**
 
-13.1 Glosario
+13.1 [Glosario](./programming/0.13.templates/013.1.glossary.md)
 
 13.2 P[lantillas de PR](./programming/0.13.templates/013.2.pr_templates.md)
 
