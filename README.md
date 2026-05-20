@@ -215,6 +215,30 @@ Simplemente copia `.editorconfig` a la raíz de cada proyecto que lo necesite. T
 
 ---
 
+## Lineamientos disponibles
+
+El punto de entrada principal es [`docs/developer_guidelines.md`](docs/developer_guidelines.md). Desde ahí se navega a todos los estándares organizacionales.
+
+Accesos directos por área:
+
+| Área | Documento |
+|---|---|
+| **Flujo de trabajo** | [Developer Guidelines](docs/developer_guidelines.md) |
+| **Definition of Ready** | [DoR](docs/programming/0.5.collaborative_work/05.3.DoR.md) |
+| **Definition of Done** | [DoD](docs/programming/0.5.collaborative_work/05.5.DoD.md) |
+| **Checklist de propuesta** | [Proposal Checklist](docs/programming/0.5.collaborative_work/05.11.proposal_checklist.md) |
+| **Gateway de entrega** | [Delivery Gateway](docs/programming/0.5.collaborative_work/05.12.delivery_gateway.md) |
+| **KPI de entregas** | [Tasa de fallos](docs/programming/0.5.collaborative_work/05.13.delivery_kpi.md) |
+| **Estándar de documentación** | [Docs Standard](docs/programming/0.5.collaborative_work/05.9.standard_docs.md) |
+| **Manuales de usuario** | [User Manual Standard](docs/programming/0.5.collaborative_work/05.10.user_manual_standard.md) |
+| **Commits** | [Commits Rules](docs/programming/0.6.git/06.3.commits_rules.md) |
+| **Pull Requests** | [PR Guide](docs/programming/0.6.git/06.4.pullrequest.md) |
+| **Plantillas de PR** | [PR Templates](docs/programming/0.13.templates/013.2.pr_templates.md) |
+| **Seguridad** | [Security Guidelines](docs/programming/0.9.security.md/09.1.security_guidelines.md) |
+| **Ambientes** | [Environments](docs/programming/0.7.repositories/07.6.environments.md) |
+
+---
+
 ## Lineamientos futuros (estructura propuesta)
 
 Este repo está pensado para crecer. Algunas carpetas sugeridas a futuro:

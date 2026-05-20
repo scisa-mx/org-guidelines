@@ -98,17 +98,29 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 
 > Revisa bien antes de subir tus cambios. Envia el PR hacia donde se esta integrando (Por default es el branch de donde estas trabajando)
 
-[5.3 Criterios de Definition of Ready / Definition of Done](programming/0.5.collaborative_work/05.3.DoR.md)
+[5.3 Definition of Ready (DoR)](programming/0.5.collaborative_work/05.3.DoR.md)
 
-5.4 Pair programming y revisiones colaborativas
+[5.4 Definition of Done (DoD)](programming/0.5.collaborative_work/05.5.DoD.md)
 
-[5.5 Prioridad y urgencia: cómo decidir](programming/0.5.collaborative_work/05.8.priorities.md)
+5.5 Pair programming y revisiones colaborativas
 
-[5.6 Proceso de documentación mínima requerida](programming/0.5.collaborative_work/05.6.min_docs.md)
+[5.6 Prioridad y urgencia: cómo decidir](programming/0.5.collaborative_work/05.8.priorities.md)
 
-5.7 Revisiones Colaborativas
+[5.7 Proceso de documentación mínima requerida](programming/0.5.collaborative_work/05.6.min_docs.md)
 
-[5.7.1 Que revisar al hacer un PR](https://docs.google.com/document/d/1-1xcl9-mmfmeSbTMRmmJmyUuW-LRAeo_fiilwK06c4s/edit?tab=t.0)
+[5.8 Estándar de documentación (features BDD, manuales de usuario, ADRs)](programming/0.5.collaborative_work/05.9.standard_docs.md)
+
+[5.9 Manuales de usuario: estándar y ciclo de vida](programming/0.5.collaborative_work/05.10.user_manual_standard.md)
+
+5.10 Revisiones Colaborativas
+
+[5.10.1 Que revisar al hacer un PR](https://docs.google.com/document/d/1-1xcl9-mmfmeSbTMRmmJmyUuW-LRAeo_fiilwK06c4s/edit?tab=t.0)
+
+[5.11 Checklist de propuesta](programming/0.5.collaborative_work/05.11.proposal_checklist.md)
+
+[5.12 Gateway de entrega](programming/0.5.collaborative_work/05.12.delivery_gateway.md)
+
+[5.13 KPI de entregas — Tasa de fallos](programming/0.5.collaborative_work/05.13.delivery_kpi.md)
 
 ---
 
