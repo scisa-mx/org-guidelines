@@ -12,6 +12,11 @@ $Skills = @(
         Name        = "scisa-changelog"
         Description = "Genera entradas de CHANGELOG siguiendo el formato organizacional SCISA"
         Files       = @("SKILL.md")
+    },
+    @{
+        Name        = "ticket-generator"
+        Description = "Genera tickets en formato JSON compacto para el widget Tauri de ClickUp"
+        Files       = @("SKILL.md")
     }
 )
 
