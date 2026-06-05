@@ -154,6 +154,8 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 
 7.6 Gestión de _feature flags_
 
+7.7 [Estándar de wiki por cliente (ambientes on-premise, versiones, manuales)](programming/0.7.repositories/07.7.client_wiki_standard.md)
+
 ---
 
 ## **8. Gestión de Scripts, Migraciones y Base de Datos**
