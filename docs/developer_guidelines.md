@@ -10,6 +10,8 @@
 
 [1.4 Cómo mantener actualizado este documento](programming/0.1.introduction/01.4.maintaining.md)
 
+[1.5. Configuración e Instalación para Montar el Entorno de Desarrollo](programming/0.1.introduction/01.5.instalation.md)
+
 ---
 
 ## **2. Estándares de Estilo y Calidad de Código**
