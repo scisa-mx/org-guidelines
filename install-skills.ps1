@@ -17,6 +17,11 @@ $Skills = @(
         Name        = "ticket-generator"
         Description = "Genera tickets en formato JSON compacto para el widget Tauri de ClickUp"
         Files       = @("SKILL.md")
+    },
+    @{
+        Name        = "idea-sink"
+        Description = "Gestiona el idea sink de Innovación en ClickUp: captura notas/ideas en el inbox del doc y las procesa convirtiéndolas en tickets estructurados"
+        Files       = @("SKILL.md")
     }
 )
 
