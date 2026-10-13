@@ -12,6 +12,10 @@
 
 [1.5. Configuración e Instalación para Montar el Entorno de Desarrollo](programming/0.1.introduction/01.5.instalation.md)
 
+[1.6 Ruta de inducción: cómo se empieza a trabajar en SCISA](programming/0.1.introduction/01.6.onboarding_path.md)
+
+[1.7 Contexto de productos y arquitectura](programming/0.1.introduction/01.7.product_context.md)
+
 ---
 
 ## **2. Estándares de Estilo y Calidad de Código**
@@ -81,9 +85,9 @@
 
 5.1 Flujo para trabajar _features_
 
-https://stackoverflowteams.com/c/scisa/questions/540
-https://docs.google.com/document/d/1IAbVGCFkRElbTYEHVtHr7cEV0uk7yXZJbShKS5bvPmo/edit?tab=t.0
-https://docs.google.com/document/d/1-1xcl9-mmfmeSbTMRmmJmyUuW-LRAeo_fiilwK06c4s/edit?tab=t.0
+[Convenciones de ramas y flujos (Gitflow)](programming/0.6.git/06.1.branching_gitflow.md#desarrollo-de-un-feature)
+
+> Todo trabajo inicia con una spec validada ([5.15 Flujo Spec-First](programming/0.5.collaborative_work/05.15.spec_first_workflow.md)).
 
 > Aqui lo mas importante es identificar claramente desde donde vas a partir para realizar tu trabajo
 
@@ -93,7 +97,7 @@ https://docs.google.com/document/d/1-1xcl9-mmfmeSbTMRmmJmyUuW-LRAeo_fiilwK06c4s/
 
 5.2 Flujo para trabajar _bugfixes_ y _hotfixes_
 
-https://stackoverflowteams.com/c/scisa/questions/540
+[Flujo de hotfix](programming/0.6.git/06.1.branching_gitflow.md#hotfix)
 
 > Aqui lo mas importante es identificar claramente en QUE version se va aplicar el FIX. Esto
 Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
@@ -121,6 +125,8 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 [5.11 Checklist de propuesta](programming/0.5.collaborative_work/05.11.proposal_checklist.md)
 
 [5.14 Estándar de pre-análisis para propuestas](programming/0.5.collaborative_work/05.14.pre_analysis_standard.md)
+
+[5.15 Flujo Spec-First: spec BDD validada como punto de partida](programming/0.5.collaborative_work/05.15.spec_first_workflow.md)
 
 [5.12 Gateway de entrega](programming/0.5.collaborative_work/05.12.delivery_gateway.md)
 
@@ -159,6 +165,8 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 7.7 [Estándar de wiki por cliente (ambientes on-premise, versiones, manuales)](programming/0.7.repositories/07.7.client_wiki_standard.md)
 
 7.8 [Manejo de subdominios (patrón canónico, proceso de solicitud, ciclo de vida)](programming/0.7.repositories/07.8.subdomain_management.md)
+
+7.9 [Portal de documentación (wiki.js)](programming/0.7.repositories/07.9.docs_portal.md)
 
 ---
 

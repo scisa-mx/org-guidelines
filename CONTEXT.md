@@ -77,7 +77,7 @@ SCISA usa una variante de Gitflow con soporte para versiones múltiples simultá
 | Rama | Propósito |
 |---|---|
 | `master` | Producción. Solo recibe merges desde `releases/*`. Cada nodo = versión etiquetada. Todo lo que llega al cliente sale de aquí. |
-| `development` | Integración. Acumula features completos. Estable pero puede contener funcionalidad no lista para producción. |
+| `development` | Integración. Acumula features completos. **No es `master`**: puede contener funcionalidad no lista para producción y puede romperse (se busca evitarlo). Equivale a versiones alfa/beta. |
 
 > **Nota:** La convención oficial es `master` / `development` / `releases/*` / `hotfixes/*`. Detalle completo, flujos y advertencias en [06.1 Convenciones de ramas](docs/programming/0.6.git/06.1.branching_gitflow.md).
 
@@ -91,6 +91,8 @@ SCISA usa una variante de Gitflow con soporte para versiones múltiples simultá
 | `STS/v<version>` | Short Term Support: soporte a versión activa del cliente cuando ya existe versión nueva en master. Principalmente SIGLO CD. | tag en `master` / `hotfixes/*` | `master` + `development` |
 | `LTS/*` | Long Term Support: soporte prolongado a versión estable sin agregar funcionalidad. Principalmente SIGLO PLD Tronco, donde múltiples clientes comparten la misma base y se necesita dar soporte a versiones anteriores sin incorporar features nuevos. | tag en `master` | — |
 
+> **Excepción:** las librerías (ej. Common) usan trunk simple (`main` + ramas cortas con PR). Ver [06.1](docs/programming/0.6.git/06.1.branching_gitflow.md#excepción-librerías-repositorio-common).
+
 ### Regla fundamental
 
 **Todo lo que llega al cliente sale de `master`** — incluyendo ambientes de QA del cliente. Nunca se libera desde `releases/*` directamente al cliente.
@@ -99,7 +101,7 @@ SCISA usa una variante de Gitflow con soporte para versiones múltiples simultá
 
 `development` = `X.Y.Z-dev` · `releases/*` = `X.Y.Z-rc.N` · `master` = `X.Y.Z`. Un número sin sufijo solo existe en `master`.
 
-> ⚠️ **No se quita funcionalidad en un release para un cliente específico.** Usar configuración / feature flag. Ver advertencia en [06.1](docs/programming/0.6.git/06.1.branching_gitflow.md#releasesversion).
+> ⚠️ **No se quita funcionalidad en un release para un cliente específico.** Usar configuración / feature flag. Ver advertencia en [06.1](docs/programming/0.6.git/06.1.branching_gitflow.md#releasesvversion).
 
 ---
 
