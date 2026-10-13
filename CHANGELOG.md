@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+### Added
+- Se agrega 06.1 Convenciones de ramas (Gitflow): ramas, flujos de feature/release/hotfix/STS, versionamiento `-dev`/`-rc.N` por rama y advertencia sobre quitar funcionalidad en releases por cliente
+
+### Changed
+- Se estandariza la nomenclatura `master` / `development` / `releases/*` / `hotfixes/*` en CONTEXT, 06.5, 06.6 y 07.3
+- Se documenta que el hotfix se lleva a `development` con rebase de su propia rama y PR
+
 ## v1.0.0 - 2026-05-20
 
 ### Added
