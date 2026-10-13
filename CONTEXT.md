@@ -77,9 +77,9 @@ SCISA usa una variante de Gitflow con soporte para versiones múltiples simultá
 | Rama | Propósito |
 |---|---|
 | `master` | Producción. Solo recibe merges desde `releases/*`. Cada nodo = versión etiquetada. Todo lo que llega al cliente sale de aquí. |
-| `development` | Integración. Acumula features completos. Estable pero puede contener funcionalidad no lista para producción. |
+| `development` | Integración. Acumula features completos. **No es `master`**: puede contener funcionalidad no lista para producción y puede romperse (se busca evitarlo). Equivale a versiones alfa/beta. |
 
-> **Nota:** La convención actual usa `development`. Se ha propuesto estandarizar a `develop` para alinearse con Gitflow canónico — decisión pendiente.
+> **Nota:** La convención oficial es `master` / `development` / `releases/*` / `hotfixes/*`. Detalle completo, flujos y advertencias en [06.1 Convenciones de ramas](docs/programming/0.6.git/06.1.branching_gitflow.md).
 
 ### Ramas short-lived
 
@@ -87,13 +87,21 @@ SCISA usa una variante de Gitflow con soporte para versiones múltiples simultá
 |---|---|---|---|
 | `features/<ticket>_<nombre>` | Desarrollar una funcionalidad específica | `development` | `development` vía PR |
 | `releases/v<version>` | Preparar un release: QA final, bug fixes, ajustes del cliente | `development` | `master` + `development` |
-| `hotfixes/<ticket>_<nombre>` | Fix crítico en producción que no puede esperar al próximo release | `master` | `master` + rebase a `development` |
-| `STS/v<version>` | Short Term Support: soporte a versión activa del cliente cuando ya existe versión nueva en master. Principalmente SIGLO CD. | tag en `master` | `master` + `development` |
+| `hotfixes/<ticket>_<nombre>` | Fix crítico en producción que no puede esperar al próximo release | `master` | `master`; luego se hace rebase de la rama sobre `development` y PR a `development` |
+| `STS/v<version>` | Short Term Support: soporte a versión activa del cliente cuando ya existe versión nueva en master. Principalmente SIGLO CD. | tag en `master` / `hotfixes/*` | `master` + `development` |
 | `LTS/*` | Long Term Support: soporte prolongado a versión estable sin agregar funcionalidad. Principalmente SIGLO PLD Tronco, donde múltiples clientes comparten la misma base y se necesita dar soporte a versiones anteriores sin incorporar features nuevos. | tag en `master` | — |
+
+> **Excepción:** las librerías (ej. Common) usan trunk simple (`main` + ramas cortas con PR). Ver [06.1](docs/programming/0.6.git/06.1.branching_gitflow.md#excepción-librerías-repositorio-common).
 
 ### Regla fundamental
 
 **Todo lo que llega al cliente sale de `master`** — incluyendo ambientes de QA del cliente. Nunca se libera desde `releases/*` directamente al cliente.
+
+### Versión por rama
+
+`development` = `X.Y.Z-dev` · `releases/*` = `X.Y.Z-rc.N` · `master` = `X.Y.Z`. Un número sin sufijo solo existe en `master`.
+
+> ⚠️ **No se quita funcionalidad en un release para un cliente específico.** Usar configuración / feature flag. Ver advertencia en [06.1](docs/programming/0.6.git/06.1.branching_gitflow.md#releasesvversion).
 
 ---
 
