@@ -128,6 +128,8 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 
 [5.15 Flujo Spec-First: spec BDD validada como punto de partida](programming/0.5.collaborative_work/05.15.spec_first_workflow.md)
 
+[5.16 Guía de historias de usuario](programming/0.5.collaborative_work/05.16.user_stories_guide.md)
+
 [5.12 Gateway de entrega](programming/0.5.collaborative_work/05.12.delivery_gateway.md)
 
 [5.13 KPI de entregas — Tasa de fallos](programming/0.5.collaborative_work/05.13.delivery_kpi.md)
