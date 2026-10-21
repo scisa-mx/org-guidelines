@@ -3,6 +3,7 @@
 ## Unreleased
 
 ### Added
+- Se agrega 06.7 Revisor automático de PRs (Code Reviewer con IA): alcance actual, roadmap de reglas de pruebas y BDD por fases y modos, y proceso para proponer mejoras al prompt
 - Se agrega 06.1 Convenciones de ramas (Gitflow): ramas, flujos de feature/release/hotfix/STS, versionamiento `-dev`/`-rc.N` por rama y advertencia sobre quitar funcionalidad en releases por cliente
 
 - Se agrega el flujo Spec-First (05.15): specs BDD en español validadas por un par antes de iniciar cualquier trabajo, aprobadas en ClickUp
@@ -11,6 +12,7 @@
 - Se documenta la excepción de trunk simple para librerías (Common) en 06.1
 
 ### Changed
+- Se corrigen typos, traducción ("relaciones públicas" → PR) y tabla de calidad de código en 06.4; se enlazan los tiempos de respuesta de revisión (010.5)
 - Se reescribe el Definition of Ready (05.3): una spec validada y criterios de aceptación son condición para tomar un ticket
 - Los escenarios BDD se escriben en español (`# language: es`); el `.feature` es la fuente de verdad y el `.md` se exporta de él
 - Wiki.js es la herramienta única de documentación; Docusaurus queda deprecado
