@@ -3,6 +3,7 @@
 ## Unreleased
 
 ### Added
+- Se agrega 06.7 Revisor automático de PRs (Code Reviewer con IA): alcance actual, roadmap de reglas de pruebas y BDD por fases y modos, y proceso para proponer mejoras al prompt
 - Se agrega 06.1 Convenciones de ramas (Gitflow): ramas, flujos de feature/release/hotfix/STS, versionamiento `-dev`/`-rc.N` por rama y advertencia sobre quitar funcionalidad en releases por cliente
 
 - Se agrega el flujo Spec-First (05.15): specs BDD en español validadas por un par antes de iniciar cualquier trabajo, aprobadas en ClickUp

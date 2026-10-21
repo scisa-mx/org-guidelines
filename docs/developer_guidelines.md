@@ -148,6 +148,8 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 
 6.6 [Protección y roles en repositorios](programming/0.6.git/06.6.repository_roles.md)
 
+6.7 [Revisor automático de PRs (Code Reviewer con IA)](programming/0.6.git/06.7.ai_code_reviewer.md)
+
 ---
 
 ## **7. Integración Continua, Entrega y Deployments**
