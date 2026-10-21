@@ -12,6 +12,7 @@
 - Se documenta la excepción de trunk simple para librerías (Common) en 06.1
 
 ### Changed
+- Se corrigen typos, traducción ("relaciones públicas" → PR) y tabla de calidad de código en 06.4; se enlazan los tiempos de respuesta de revisión (010.5)
 - Se reescribe el Definition of Ready (05.3): una spec validada y criterios de aceptación son condición para tomar un ticket
 - Los escenarios BDD se escriben en español (`# language: es`); el `.feature` es la fuente de verdad y el `.md` se exporta de él
 - Wiki.js es la herramienta única de documentación; Docusaurus queda deprecado
