@@ -3,6 +3,8 @@
 ## Unreleased
 
 ### Added
+- Se agrega la skill `preparar-proyecto`: deja un proyecto nuevo o existente con la estructura, documentación base y reglas de trabajo de los lineamientos, enlazando a 06.1, 06.3, 07.2 y 07.3 en vez de copiarlos
+- El instalador de skills fuerza TLS 1.2 para funcionar en Windows PowerShell 5.1
 - Se agrega 06.7 Revisor automático de PRs (Code Reviewer con IA): alcance actual, roadmap de reglas de pruebas y BDD por fases y modos, y proceso para proponer mejoras al prompt
 - Se agrega 06.1 Convenciones de ramas (Gitflow): ramas, flujos de feature/release/hotfix/STS, versionamiento `-dev`/`-rc.N` por rama y advertencia sobre quitar funcionalidad en releases por cliente
 

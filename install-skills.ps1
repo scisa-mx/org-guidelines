@@ -4,6 +4,9 @@
 
 $ErrorActionPreference = "Stop"
 
+# Windows PowerShell 5.1 no usa TLS 1.2 por defecto y GitHub lo exige
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
+
 $BaseUrl  = "https://raw.githubusercontent.com/scisa-mx/org-guidelines/main/skills"
 $SkillsDir = Join-Path $env:USERPROFILE ".claude\skills"
 
@@ -27,6 +30,11 @@ $Skills = @(
         Name        = "ticket-template"
         Description = "Plantilla y flujo para crear tickets (Bug/Feature/Task/Spike/Epic) directo en ClickUp vía MCP"
         Files       = @("SKILL.md")
+    },
+    @{
+        Name        = "preparar-proyecto"
+        Description = "Prepara un proyecto nuevo o existente con la estructura, documentación y reglas de trabajo de org-guidelines"
+        Files       = @("SKILL.md", "PLANTILLAS.md", "exportar-features.js")
     }
 )
 
