@@ -75,7 +75,7 @@ Definir que el segundo PR debe actualizarse y re-validarse tras el merge del pri
 
 ## Propuesta concreta
 
-1. Adoptar **Opción A** de inmediato en 6.1 y 7.3.
+1. Adoptar **Opción A** de inmediato en 6.1 y 7.3. *(Aplicada: procedimiento en [6.1](../programming/0.6.git/06.1.branching_gitflow.md), referencia en [7.3](../programming/0.7.repositories/07.3.semantic_versioning.md).)*
 2. Evaluar **Opción B** con el Tech Lead durante un ciclo de release antes de adoptarla.
 
 ### Documentos a ajustar si se adopta B

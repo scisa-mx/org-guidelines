@@ -4,6 +4,7 @@
 
 ### Added
 - Se agrega política de versionado y CHANGELOG de este repositorio (01.4)
+- Se documenta en 06.1 y 07.3 cómo resolver el conflicto de versión/`Unreleased` cuando otro PR se integra primero (propuesta de fondo en `version_conflict_prs`)
 - Se agrega 05.17 Documento de Validación de Entrega (obligatorio por release, publicado en el wiki del cliente/producto; lo no listado queda fuera de alcance), 2.8 Documentación generada desde Reqnroll (`.feature` en `tests/**`, sin versionado aparte: diff entre tags de git), spike de evaluación de la herramienta generadora, template 013.5 y `docs/README.md` con el mapa de docs y su despliegue al portal; el Gateway de entrega (05.12) lo exige
 - Se agrega 06.7 Revisor automático de PRs (Code Reviewer con IA): alcance actual, roadmap de reglas de pruebas y BDD por fases y modos, y proceso para proponer mejoras al prompt
 - Se agrega 06.1 Convenciones de ramas (Gitflow): ramas, flujos de feature/release/hotfix/STS, versionamiento `-dev`/`-rc.N` por rama y advertencia sobre quitar funcionalidad en releases por cliente
