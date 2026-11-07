@@ -38,6 +38,8 @@
 
 [2.7 Documentación basada en BDD](programming/0.2.code_standards/2.7.bdd_documentation.md)
 
+[2.8 Documentación generada desde Reqnroll](programming/0.2.code_standards/2.8.reqnroll_documentation.md)
+
 
 ---
 
@@ -131,6 +133,8 @@ Para no enviar cosas que el cliente NO espera. Unicamente LO reportado
 [5.16 Guía de historias de usuario](programming/0.5.collaborative_work/05.16.user_stories_guide.md)
 
 [5.12 Gateway de entrega](programming/0.5.collaborative_work/05.12.delivery_gateway.md)
+
+[5.17 Documento de Validación de Entrega](programming/0.5.collaborative_work/05.17.delivery_validation_doc.md)
 
 [5.13 KPI de entregas — Tasa de fallos](programming/0.5.collaborative_work/05.13.delivery_kpi.md)
 
