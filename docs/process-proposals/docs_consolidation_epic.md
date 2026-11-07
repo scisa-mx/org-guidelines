@@ -60,7 +60,7 @@ Columnas del inventario: nombre, enlace, fuente, producto/proyecto, tipo (spec, 
 
 **Ticket 2.1: Pipeline de publicación** `docs/` → `docs-portal` al mergear a `master`.
 
-**Ticket 2.2: Herramienta de exportación** `.feature` → bloque del `.md` y validación en PR.
+**Ticket 2.2: Herramienta de generación** desde los `.feature` de Reqnroll (documentación de features y Documento de Validación de Entrega). Primero spike de evaluación: [doc_generator_evaluation](./doc_generator_evaluation.md).
 
 **Ticket 2.3: Skill** para generar spec + ADR + diagrama desde una conversación.
 

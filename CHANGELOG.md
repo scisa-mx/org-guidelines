@@ -3,6 +3,9 @@
 ## Unreleased
 
 ### Added
+- Se agrega política de versionado y CHANGELOG de este repositorio (01.4)
+- Se documenta en 06.1 y 07.3 cómo resolver el conflicto de versión/`Unreleased` cuando otro PR se integra primero (propuesta de fondo en `version_conflict_prs`)
+- Se agrega 05.17 Documento de Validación de Entrega (obligatorio por release, publicado en el wiki del cliente/producto; lo no listado queda fuera de alcance), 2.8 Documentación generada desde Reqnroll (`.feature` en `tests/**`, sin versionado aparte: diff entre tags de git), spike de evaluación de la herramienta generadora, template 013.5 y `docs/README.md` con el mapa de docs y su despliegue al portal; el Gateway de entrega (05.12) lo exige
 - Se agrega 06.7 Revisor automático de PRs (Code Reviewer con IA): alcance actual, roadmap de reglas de pruebas y BDD por fases y modos, y proceso para proponer mejoras al prompt
 - Se agrega 06.1 Convenciones de ramas (Gitflow): ramas, flujos de feature/release/hotfix/STS, versionamiento `-dev`/`-rc.N` por rama y advertencia sobre quitar funcionalidad en releases por cliente
 
@@ -12,6 +15,8 @@
 - Se documenta la excepción de trunk simple para librerías (Common) en 06.1
 
 ### Changed
+- **Cambio de proceso:** los `.feature` viven en `tests/Scisa.<Namespace>.Tests.Specs/Features/` (Reqnroll) y ya no en `docs/features/`; los escenarios no se copian a un `.md`, la documentación se genera del `.feature`. Se actualizan 05.6, 05.9, 05.15, 2.4, 2.7, 013.2, 013.4, 05.5, 05.12, 06.7, 07.9, 01.6 y 01.7. El `.md` de contexto en `docs/features/` es opcional
+- Se elimina el bloque de escenarios exportado y su validación `.feature` ↔ `.md`; el pipeline de PR ahora exige que el cambio de código toque algún `.feature`
 - Se corrigen typos, traducción ("relaciones públicas" → PR) y tabla de calidad de código en 06.4; se enlazan los tiempos de respuesta de revisión (010.5)
 - Se reescribe el Definition of Ready (05.3): una spec validada y criterios de aceptación son condición para tomar un ticket
 - Los escenarios BDD se escriben en español (`# language: es`); el `.feature` es la fuente de verdad y el `.md` se exporta de él

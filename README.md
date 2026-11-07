@@ -228,6 +228,7 @@ Accesos directos por área:
 | **Definition of Done** | [DoD](docs/programming/0.5.collaborative_work/05.5.DoD.md) |
 | **Checklist de propuesta** | [Proposal Checklist](docs/programming/0.5.collaborative_work/05.11.proposal_checklist.md) |
 | **Gateway de entrega** | [Delivery Gateway](docs/programming/0.5.collaborative_work/05.12.delivery_gateway.md) |
+| **Documento de Validación de Entrega** | [Validación de entrega](docs/programming/0.5.collaborative_work/05.17.delivery_validation_doc.md) |
 | **KPI de entregas** | [Tasa de fallos](docs/programming/0.5.collaborative_work/05.13.delivery_kpi.md) |
 | **Estándar de documentación** | [Docs Standard](docs/programming/0.5.collaborative_work/05.9.standard_docs.md) |
 | **Manuales de usuario** | [User Manual Standard](docs/programming/0.5.collaborative_work/05.10.user_manual_standard.md) |
